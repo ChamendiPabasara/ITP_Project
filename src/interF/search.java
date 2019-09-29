@@ -53,7 +53,7 @@ public class search extends javax.swing.JFrame {
     {
        
          try {
-            String sql = "SELECT SID,DID,year_sem,gpa,sem_status FROM results";
+           String sql = "SELECT r.SID,st.NameDentedByInitials,r.DID,r.year_sem,r.gpa,r.sem_status FROM results r,student st WHERE r.SID = st.id";
                //String sql = "SELECT r.SID,st.FName ,r.DID,r.year_sem,r.gpa,r.sem_status FROM results r,student st WHERE r.SID = st.SID ";
              
              pst = (PreparedStatement) con.prepareStatement(sql);
@@ -171,7 +171,7 @@ public class search extends javax.swing.JFrame {
         table1.setBackground(new java.awt.Color(51, 51, 51));
         table1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         table1.setFont(new java.awt.Font("Tahoma", 1, 19)); // NOI18N
-        table1.setForeground(new java.awt.Color(255, 255, 255));
+        table1.setForeground(new java.awt.Color(255, 153, 0));
         table1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -246,16 +246,12 @@ public class search extends javax.swing.JFrame {
                             .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 939, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(207, 207, 207))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1097, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(172, 172, 172))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 589, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(86, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(56, 56, 56)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -273,13 +269,17 @@ public class search extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ys, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(62, 62, 62))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-back-arrow-48.png"))); // NOI18N
@@ -395,12 +395,14 @@ public class search extends javax.swing.JFrame {
         int r = table1.getSelectedRow();
 
         String sid = table1.getValueAt(r,0).toString();
-        String dep = table1.getValueAt(r,1).toString();
-        String year = table1.getValueAt(r,2).toString();
-        String gpa = table1.getValueAt(r,3).toString();
-        String status = table1.getValueAt(r,4).toString();
+        String sname = table1.getValueAt(r,1).toString();
+        String dep = table1.getValueAt(r,2).toString();
+        String year = table1.getValueAt(r,3).toString();
+        String gpa = table1.getValueAt(r,4).toString();
+        String status = table1.getValueAt(r,5).toString();
 
         SIDbox.setText(sid);
+        namebox.setText(sname);
         depbox.setSelectedItem(dep);
         ys.setSelectedItem(year);
 
@@ -438,7 +440,7 @@ public class search extends javax.swing.JFrame {
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
-         year1_semi1 year1sem1 = new year1_semi1();
+        year1_semi1 year1sem1 = new year1_semi1();
         year1sem1.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel3MouseClicked

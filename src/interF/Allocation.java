@@ -43,7 +43,7 @@ public class Allocation extends javax.swing.JFrame {
        
         try{
             
-            String sq="SELECT id,NameDentedByInitials ,CID,DID,Batch FROM student ";
+            String sq="SELECT id,NameDentedByInitials,CID,DID,Batch FROM student ";
            // String sql="SELECT SID,SName,CID,CName,Batch FROM student ";
             pst=(PreparedStatement) con.prepareStatement(sq);
             rs=pst.executeQuery();
@@ -284,7 +284,7 @@ public class Allocation extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(b1, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
                     .addComponent(b4, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
@@ -292,9 +292,9 @@ public class Allocation extends javax.swing.JFrame {
                     .addComponent(b2, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
                     .addComponent(depbox, 0, 0, Short.MAX_VALUE)
                     .addComponent(yearsembox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 967, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -434,6 +434,7 @@ public class Allocation extends javax.swing.JFrame {
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_b2ActionPerformed
 
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
@@ -611,15 +612,14 @@ public class Allocation extends javax.swing.JFrame {
     }//GEN-LAST:event_depboxActionPerformed
 
     private void b2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b2MouseClicked
-       
-                 
+                     
      try {
              String sid = b1.getText();
             Statement stmt =con.createStatement();
-            rs=stmt.executeQuery("SELECT NameDentedByInitials   FROM student  WHERE id = '"+sid+"'");
+            rs=stmt.executeQuery("SELECT NameDentedByInitials FROM student WHERE id ='"+sid+"'");
             while(rs.next())
             {
-                String sname = rs.getString("NameDentedByInitials ");
+                String sname = rs.getString("NameDentedByInitials");
                 b2.setText(sname);
             }
         } catch (SQLException ex) {

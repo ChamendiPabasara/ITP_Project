@@ -42,7 +42,7 @@ public class Searchvalue extends javax.swing.JFrame {
     {
        
          try {
-            String sql = "SELECT SID,DID,year_sem,gpa,sem_status FROM results";
+            String sql = "SELECT r.SID,st.NameDentedByInitials,r.DID,r.year_sem,r.gpa,r.sem_status FROM results r,student st WHERE r.SID = st.id";
              pst = (PreparedStatement) con.prepareStatement(sql);
              rs=pst.executeQuery();
              
@@ -72,16 +72,20 @@ public class Searchvalue extends javax.swing.JFrame {
         SIDbox = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         table1 = new javax.swing.JTable();
-        jButton5 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        stbox = new javax.swing.JTextField();
+        gpabox = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
-        searchoption = new javax.swing.JComboBox();
+        yearbox = new javax.swing.JComboBox();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         snamebox = new javax.swing.JTextField();
-        jButton7 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        searchoption = new javax.swing.JComboBox();
+        jLabel13 = new javax.swing.JLabel();
+        stbox = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -131,7 +135,7 @@ public class Searchvalue extends javax.swing.JFrame {
 
         table1.setBackground(new java.awt.Color(51, 51, 51));
         table1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        table1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        table1.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         table1.setForeground(new java.awt.Color(255, 153, 0));
         table1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -157,26 +161,16 @@ public class Searchvalue extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(table1);
 
-        jButton5.setBackground(new java.awt.Color(0, 0, 0));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 153, 0));
-        jButton5.setText("Back");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 27)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Semester Status");
+        jLabel8.setText("Year & Semester");
 
-        stbox.setBackground(new java.awt.Color(51, 51, 51));
-        stbox.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        stbox.setForeground(new java.awt.Color(255, 153, 0));
-        stbox.addActionListener(new java.awt.event.ActionListener() {
+        gpabox.setBackground(new java.awt.Color(51, 51, 51));
+        gpabox.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        gpabox.setForeground(new java.awt.Color(255, 153, 0));
+        gpabox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stboxActionPerformed(evt);
+                gpaboxActionPerformed(evt);
             }
         });
 
@@ -190,12 +184,12 @@ public class Searchvalue extends javax.swing.JFrame {
             }
         });
 
-        searchoption.setBackground(new java.awt.Color(51, 51, 51));
-        searchoption.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        searchoption.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Student  Name", "Student RegNO", "Department", "Year & Semester", "GPA", "Semester Status", " " }));
-        searchoption.addActionListener(new java.awt.event.ActionListener() {
+        yearbox.setBackground(new java.awt.Color(51, 51, 51));
+        yearbox.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        yearbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Year 1 Semester 2", "Year 2 Semester 1", "Year 2 Semester 2", "Year 3 Semester 1", "Year 3 Semester 2", "Year 4 Semester 1", "Year 4 Semester 2" }));
+        yearbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchoptionActionPerformed(evt);
+                yearboxActionPerformed(evt);
             }
         });
 
@@ -216,16 +210,6 @@ public class Searchvalue extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(0, 0, 0));
-        jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 153, 0));
-        jButton7.setText("Search");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 23)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 153, 0));
@@ -236,46 +220,67 @@ public class Searchvalue extends javax.swing.JFrame {
             }
         });
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 27)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Semester Status");
+
+        searchoption.setBackground(new java.awt.Color(51, 51, 51));
+        searchoption.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        searchoption.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Student  Name", "Student RegNO", "Department", "Year & Semester", "GPA", "Semester Status", " " }));
+        searchoption.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchoptionActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 27)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("GPA");
+
+        stbox.setBackground(new java.awt.Color(51, 51, 51));
+        stbox.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        stbox.setForeground(new java.awt.Color(255, 153, 0));
+        stbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stboxActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1152, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addComponent(jLabel4)
-                                    .addGap(41, 41, 41)
-                                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(SIDbox, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(snamebox, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(stbox, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(searchoption, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(jLabel10))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel8))
-                                .addGap(338, 338, 338)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 61, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(66, 66, 66)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(snamebox, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
+                            .addComponent(SIDbox)
+                            .addComponent(stbox)
+                            .addComponent(yearbox, 0, 297, Short.MAX_VALUE)
+                            .addComponent(gpabox, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
+                            .addComponent(searchoption, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(210, 210, 210)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 799, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(485, 485, 485))
+                        .addGap(220, 220, 220)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(155, 155, 155))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(93, 93, 93)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -284,31 +289,49 @@ public class Searchvalue extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel10)
-                            .addComponent(snamebox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(47, 47, 47)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(SIDbox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(52, 52, 52)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel8)
-                            .addComponent(stbox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(58, 58, 58)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel9)
                             .addComponent(searchoption, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(98, 98, 98)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(91, 91, 91)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(205, 205, 205)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addComponent(snamebox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(44, 44, 44)
+                                .addComponent(jLabel10)))
+                        .addGap(50, 50, 50)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(SIDbox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
+                        .addGap(55, 55, 55)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(yearbox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(gpabox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel13))
+                        .addGap(53, 53, 53)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11)
+                            .addComponent(stbox, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(89, 89, 89)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 588, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(239, 239, 239)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-back-arrow-48.png"))); // NOI18N
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-home-48.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -319,7 +342,11 @@ public class Searchvalue extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -331,7 +358,13 @@ public class Searchvalue extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -361,14 +394,6 @@ public class Searchvalue extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_SIDboxActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-
-       
-        year1_semi1 y1s1 = new year1_semi1();
-        y1s1.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void table1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table1MouseClicked
        
 //     int r = table1.getSelectedRow();
@@ -387,9 +412,9 @@ public class Searchvalue extends javax.swing.JFrame {
         
     }//GEN-LAST:event_table1MouseClicked
 
-    private void stboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stboxActionPerformed
+    private void gpaboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gpaboxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_stboxActionPerformed
+    }//GEN-LAST:event_gpaboxActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
        
@@ -399,33 +424,13 @@ public class Searchvalue extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void searchoptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchoptionActionPerformed
+    private void yearboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yearboxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_searchoptionActionPerformed
+    }//GEN-LAST:event_yearboxActionPerformed
 
     private void snameboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_snameboxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_snameboxActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-      
-      
-        String sid = SIDbox.getText();
-        String sql = "SELECT SID,DID,year_sem,gpa,sem_status FROM results WHERE SID Like '%"+sid+"%'";
-        
-        try {
-              
-             pst = (PreparedStatement) con.prepareStatement(sql);
-             rs = pst.executeQuery();
-             
-              table1.setModel(DbUtils.resultSetToTableModel(rs));
-             
-         } catch (SQLException ex) {
-             Logger.getLogger(Searchvalue.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        
-        
-    }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
@@ -433,13 +438,9 @@ public class Searchvalue extends javax.swing.JFrame {
    
    if(option == "Student  Name")
    {
-       
-   }
-   else if(option == "Student RegNO")
-   {
+         String sname = snamebox.getText();
         
-  String sid = SIDbox.getText();
-        String sql = "SELECT SID,ENGL11013,ENGL11263,PCEN11323,PCEN12333 FROM year1sem1 WHERE SID Like '%"+sid+"%'";
+         String sql = "SELECT r.SID,st.NameDentedByInitials,r.DID,r.year_sem,r.gpa,r.sem_status FROM results r,student st WHERE r.SID = st.id AND st.NameDentedByInitials Like '%"+sname+"%'";
         
         try {
               
@@ -451,29 +452,115 @@ public class Searchvalue extends javax.swing.JFrame {
          } catch (SQLException ex) {
              Logger.getLogger(Searchvalue.class.getName()).log(Level.SEVERE, null, ex);
          }
-        
-        
-        
    }
-   else if(option =="Department")
+   else if(option == "Student RegNO")
    {
-       
+        
+        String sid = SIDbox.getText();
+        
+         String sql = "SELECT r.SID,st.NameDentedByInitials,r.DID,r.year_sem,r.gpa,r.sem_status FROM results r,student st WHERE r.SID = st.id AND r.SID Like '%"+sid+"%'";
+        
+        try {
+              
+             pst = (PreparedStatement) con.prepareStatement(sql);
+             rs = pst.executeQuery();
+             
+              table1.setModel(DbUtils.resultSetToTableModel(rs));
+             
+         } catch (SQLException ex) {
+             Logger.getLogger(Searchvalue.class.getName()).log(Level.SEVERE, null, ex);
+         }
+      
    }
+   /*else if(option =="Department")
+   {
+      String dep = depBox.getSelectedItem().toString();
+       
+     String sql = "SELECT r.SID,st.NameDentedByInitials,r.DID,r.year_sem,r.gpa,r.sem_status FROM results r,student st WHERE r.SID = st.id AND r.year_sem = '"+dep+"'";
+        
+        try {
+              
+             pst = (PreparedStatement) con.prepareStatement(sql);
+             rs = pst.executeQuery();
+             
+              table1.setModel(DbUtils.resultSetToTableModel(rs));
+             
+         } catch (SQLException ex) {
+             Logger.getLogger(Searchvalue.class.getName()).log(Level.SEVERE, null, ex);
+         }  
+        
+     
+   }*/
    else if(option =="Year & Semester")
    {
+       String year = yearbox.getSelectedItem().toString();
        
+     String sql = "SELECT r.SID,st.NameDentedByInitials,r.DID,r.year_sem,r.gpa,r.sem_status FROM results r,student st WHERE r.SID = st.id AND r.year_sem = '"+year+"'";
+        
+        try {
+              
+             pst = (PreparedStatement) con.prepareStatement(sql);
+             rs = pst.executeQuery();
+             
+              table1.setModel(DbUtils.resultSetToTableModel(rs));
+             
+         } catch (SQLException ex) {
+             Logger.getLogger(Searchvalue.class.getName()).log(Level.SEVERE, null, ex);
+         }  
    }
    else if(option =="GPA")
    {
-       
+         
+        String gpa = gpabox.getText();
+        
+         String sql = "SELECT r.SID,st.NameDentedByInitials,r.DID,r.year_sem,r.gpa,r.sem_status FROM results r,student st WHERE r.SID = st.id AND r.gpa Like '%"+gpa+"%'";
+        
+        try {
+              
+             pst = (PreparedStatement) con.prepareStatement(sql);
+             rs = pst.executeQuery();
+             
+              table1.setModel(DbUtils.resultSetToTableModel(rs));
+             
+         } catch (SQLException ex) {
+             Logger.getLogger(Searchvalue.class.getName()).log(Level.SEVERE, null, ex);
+         }
    }
    else if(option =="Semester Status")
    {
-       
+        String status = stbox.getText();
+        
+         String sql = "SELECT r.SID,st.NameDentedByInitials,r.DID,r.year_sem,r.gpa,r.sem_status FROM results r,student st WHERE r.SID = st.id AND r.sem_status Like '%"+status+"%'";
+        
+        try {
+              
+             pst = (PreparedStatement) con.prepareStatement(sql);
+             rs = pst.executeQuery();
+             
+              table1.setModel(DbUtils.resultSetToTableModel(rs));
+             
+         } catch (SQLException ex) {
+             Logger.getLogger(Searchvalue.class.getName()).log(Level.SEVERE, null, ex);
+         }
    }
    
    
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void searchoptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchoptionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchoptionActionPerformed
+
+    private void stboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stboxActionPerformed
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        search ser = new search();
+        ser.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
      * @param args the command line arguments
@@ -513,15 +600,18 @@ public class Searchvalue extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField SIDbox;
+    private javax.swing.JTextField gpabox;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -532,5 +622,6 @@ public class Searchvalue extends javax.swing.JFrame {
     private javax.swing.JTextField snamebox;
     private javax.swing.JTextField stbox;
     private javax.swing.JTable table1;
+    private javax.swing.JComboBox yearbox;
     // End of variables declaration//GEN-END:variables
 }
