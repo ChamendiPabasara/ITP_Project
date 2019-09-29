@@ -8,6 +8,9 @@ import com.mysql.jdbc.PreparedStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import myCodes.DBconnect;
 import net.proteanit.sql.DbUtils;
@@ -18,12 +21,13 @@ import net.proteanit.sql.DbUtils;
  */
 public class subAdd extends javax.swing.JFrame {
 
-    
+    ResultSet rs;
     Connection con = null;
     PreparedStatement pst1 = null;
     PreparedStatement pst2 = null;
       PreparedStatement pst = null;
-    ResultSet rs = null;
+//    ResultSet rs = null;
+  
     
     
     public subAdd() {
@@ -32,6 +36,8 @@ public class subAdd extends javax.swing.JFrame {
          //Connect to DB
         con = DBconnect.connect();
         
+       
+         table.setRowHeight(40);
         tableLoad();
     }
     
@@ -76,13 +82,15 @@ public class subAdd extends javax.swing.JFrame {
         b1 = new javax.swing.JTextField();
         b2 = new javax.swing.JTextField();
         b3 = new javax.swing.JTextField();
-        b4 = new javax.swing.JTextField();
+        b5 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         btn1 = new javax.swing.JButton();
         btn2 = new javax.swing.JButton();
         btn3 = new javax.swing.JButton();
         btn4 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        b4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -130,7 +138,7 @@ public class subAdd extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("CID");
+        jLabel6.setText("Course Name");
 
         b1.setBackground(new java.awt.Color(51, 51, 51));
         b1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
@@ -146,6 +154,11 @@ public class subAdd extends javax.swing.JFrame {
         b2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         b2.setForeground(new java.awt.Color(255, 255, 255));
         b2.setPreferredSize(new java.awt.Dimension(10, 25));
+        b2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b2MouseClicked(evt);
+            }
+        });
         b2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b2ActionPerformed(evt);
@@ -162,13 +175,18 @@ public class subAdd extends javax.swing.JFrame {
             }
         });
 
-        b4.setBackground(new java.awt.Color(51, 51, 51));
-        b4.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        b4.setForeground(new java.awt.Color(255, 255, 255));
-        b4.setPreferredSize(new java.awt.Dimension(10, 25));
-        b4.addActionListener(new java.awt.event.ActionListener() {
+        b5.setBackground(new java.awt.Color(51, 51, 51));
+        b5.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        b5.setForeground(new java.awt.Color(255, 255, 255));
+        b5.setPreferredSize(new java.awt.Dimension(10, 25));
+        b5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b5MouseClicked(evt);
+            }
+        });
+        b5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b4ActionPerformed(evt);
+                b5ActionPerformed(evt);
             }
         });
 
@@ -239,6 +257,32 @@ public class subAdd extends javax.swing.JFrame {
             }
         });
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("CID");
+
+        b4.setBackground(new java.awt.Color(51, 51, 51));
+        b4.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        b4.setForeground(new java.awt.Color(255, 255, 255));
+        b4.setPreferredSize(new java.awt.Dimension(10, 25));
+        b4.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                b4ComponentAdded(evt);
+            }
+        });
+        b4.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                b4InputMethodTextChanged(evt);
+            }
+        });
+        b4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -259,19 +303,18 @@ public class subAdd extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(jPanel5Layout.createSequentialGroup()
-                                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                                    .addGroup(jPanel5Layout.createSequentialGroup()
-                                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(69, 69, 69)))
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                                        .addComponent(b4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(75, 75, 75))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                                        .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(83, 83, 83)))))
+                                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(b3, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
+                                    .addComponent(b5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(b4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(83, 83, 83)))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(87, 87, 87))
                     .addGroup(jPanel5Layout.createSequentialGroup()
@@ -306,10 +349,14 @@ public class subAdd extends javax.swing.JFrame {
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(b5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(56, 56, 56)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -402,10 +449,11 @@ public class subAdd extends javax.swing.JFrame {
         String sname = b2.getText();
         String credit = b3.getText();
         String cid = b4.getText();
+        String cname = b5.getText();
 
         try {
 
-            if(b1.getText().isEmpty() || b2.getText().isEmpty()||b3.getText().isEmpty() || b4.getText().isEmpty())
+            if(b1.getText().isEmpty() || b2.getText().isEmpty()||b3.getText().isEmpty() || b4.getText().isEmpty()|| b5.getText().isEmpty())
             {
                 JOptionPane.showMessageDialog(null, "Please fill all Fields !!!");
             }
@@ -413,6 +461,7 @@ public class subAdd extends javax.swing.JFrame {
             else{
 
                 String q1 = "INSERT INTO subject (Scode,SName,Credit,CID) values ('"+ sid +"','"+ sname +"','"+ credit +"','"+ cid +"');";
+               // String q2 = "INSERT INTO course (CID) values ('"+ cid +"');";
 
                 pst1 = (PreparedStatement) con.prepareStatement(q1);
 
@@ -437,9 +486,10 @@ public class subAdd extends javax.swing.JFrame {
         if(x == 0)
         {
             String sid = b1.getText();
-            String s1 = b2.getText();
-            String s2 = b3.getText();
-            String s3 = b4.getText();
+            String sname = b2.getText();
+            String credit = b3.getText();
+            String cid = b4.getText();
+            String cname = b5.getText();
 
             try{
 
@@ -467,10 +517,11 @@ public class subAdd extends javax.swing.JFrame {
 
         if(x == 0)
         {
-            String sid = b1.getText();
+             String sid = b1.getText();
             String sname = b2.getText();
             String credit = b3.getText();
             String cid = b4.getText();
+            String cname = b5.getText();
 
             try{
 
@@ -508,9 +559,9 @@ public class subAdd extends javax.swing.JFrame {
 
     }//GEN-LAST:event_tableMouseClicked
 
-    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
+    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_b4ActionPerformed
+    }//GEN-LAST:event_b5ActionPerformed
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         // TODO add your handling code here:
@@ -523,6 +574,50 @@ public class subAdd extends javax.swing.JFrame {
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_b2ActionPerformed
+
+    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
+      
+      
+        
+        
+    }//GEN-LAST:event_b4ActionPerformed
+
+    private void b5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b5MouseClicked
+       
+             
+     try {
+             String cid = b4.getText();
+            Statement stmt =con.createStatement();
+            rs=stmt.executeQuery("SELECT CName  FROM course  WHERE CID = '"+cid+"'");
+            while(rs.next())
+            {
+                String cname = rs.getString("CName");
+                b5.setText(cname);
+            }
+        } catch (SQLException ex) {
+           System.out.println(ex.toString());
+        }
+       
+            
+        
+        
+    }//GEN-LAST:event_b5MouseClicked
+
+    private void b4ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_b4ComponentAdded
+         
+   
+       
+    }//GEN-LAST:event_b4ComponentAdded
+
+    private void b4InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_b4InputMethodTextChanged
+      
+       
+        
+    }//GEN-LAST:event_b4InputMethodTextChanged
+
+    private void b2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -564,6 +659,7 @@ public class subAdd extends javax.swing.JFrame {
     private javax.swing.JTextField b2;
     private javax.swing.JTextField b3;
     private javax.swing.JTextField b4;
+    private javax.swing.JTextField b5;
     private javax.swing.JButton btn1;
     private javax.swing.JButton btn2;
     private javax.swing.JButton btn3;
@@ -575,6 +671,7 @@ public class subAdd extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;

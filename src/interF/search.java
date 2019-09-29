@@ -31,9 +31,9 @@ public class search extends javax.swing.JFrame {
     PreparedStatement pst1 = null;
     PreparedStatement pst2 = null;
     
-    ResultSet rs1 = null;
+     ResultSet rs1 = null;
      ResultSet rs2 = null;
-      ResultSet rs = null;
+     ResultSet rs = null;
     
     public search() {
         initComponents();
@@ -53,7 +53,9 @@ public class search extends javax.swing.JFrame {
     {
        
          try {
-             String sql = "SELECT SID,DID,year_sem,gpa,sem_status FROM results";
+            String sql = "SELECT SID,DID,year_sem,gpa,sem_status FROM results";
+               //String sql = "SELECT r.SID,st.FName ,r.DID,r.year_sem,r.gpa,r.sem_status FROM results r,student st WHERE r.SID = st.SID ";
+             
              pst = (PreparedStatement) con.prepareStatement(sql);
              rs=pst.executeQuery();
              
@@ -94,6 +96,7 @@ public class search extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         namebox = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -279,6 +282,13 @@ public class search extends javax.swing.JFrame {
                 .addGap(62, 62, 62))
         );
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-back-arrow-48.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -286,7 +296,9 @@ public class search extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(877, 877, 877)
+                        .addContainerGap()
+                        .addComponent(jLabel3)
+                        .addGap(824, 824, 824)
                         .addComponent(jLabel1))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(359, 359, 359)
@@ -299,8 +311,11 @@ public class search extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1))
+                    .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
@@ -397,25 +412,36 @@ public class search extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     
-         String sidB = SIDbox.getSelectedText();
-        String nameB = namebox.getSelectedText();
-        String sql1 = "SELECT r.SID,st.FName,r.DID,r.year_sem,r.gpa,r.sem_status  FROM results r,student st WHERE st.FName LIKE '%"+ nameB +"%' ";
-        String sql2 = "SELECT r.SID,st.FName,r.DID,r.year_sem,r.gpa,r.sem_status  FROM results r,student st WHERE r.SID LIKE '%"+ sidB +"%' ";
-         
-         
-        try {
-            pst1 = (PreparedStatement) con.prepareStatement(sql1);
-            rs1 = pst1.executeQuery();
-            rs2 = pst2.executeQuery();
-            table1.setModel(DbUtils.resultSetToTableModel(rs1));
-            table1.setModel(DbUtils.resultSetToTableModel(rs2));
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(search.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//         String sidB = SIDbox.getSelectedText();
+//        String nameB = namebox.getSelectedText();
+//        String sql1 = "SELECT r.SID,st.FName,r.DID,r.year_sem,r.gpa,r.sem_status  FROM results r,student st WHERE st.FName LIKE '%"+ nameB +"%' ";
+//        String sql2 = "SELECT r.SID,st.FName,r.DID,r.year_sem,r.gpa,r.sem_status  FROM results r,student st WHERE r.SID LIKE '%"+ sidB +"%' ";
+//         
+//         
+//        try {
+//            pst1 = (PreparedStatement) con.prepareStatement(sql1);
+//            rs1 = pst1.executeQuery();
+//            rs2 = pst2.executeQuery();
+//            table1.setModel(DbUtils.resultSetToTableModel(rs1));
+//            table1.setModel(DbUtils.resultSetToTableModel(rs2));
+//            
+//        } catch (SQLException ex) {
+//            Logger.getLogger(search.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+        
+        Searchvalue search = new Searchvalue();
+        search.setVisible(true);
+        this.dispose();
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+         year1_semi1 year1sem1 = new year1_semi1();
+        year1sem1.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -460,6 +486,7 @@ public class search extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

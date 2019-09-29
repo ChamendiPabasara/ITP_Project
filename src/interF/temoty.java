@@ -375,7 +375,7 @@ public class temoty extends javax.swing.JFrame {
             
         
             
-        String q1 = "INSERT INTO student (SID,FName,LName,NIC,Address,DOB,Type,Passport,Country,CID,DID) values ('"+ sid +"','"+ fn +"','"+ ln +"','"+ nic +"','"+ addr +"'');";
+        String q1 = "INSERT INTO student (SID,FName,LName,NIC,Address,DOB,Type,Passport,Country) values ('"+ sid +"','"+ fn +"','"+ ln +"','"+ nic +"','"+ addr +"','"+dob+"','"+typ+"','"+pass+"','"+cou+"');";
       
         pst1 = (PreparedStatement) con.prepareStatement(q1);
        

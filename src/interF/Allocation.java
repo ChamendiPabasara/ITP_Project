@@ -8,6 +8,7 @@ import com.mysql.jdbc.PreparedStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 import myCodes.DBconnect;
 import net.proteanit.sql.DbUtils;
@@ -32,6 +33,8 @@ public class Allocation extends javax.swing.JFrame {
          //Connect to DB
         con = DBconnect.connect();
         
+       
+         table.setRowHeight(40);
         tableLoad();
     }
     
@@ -40,8 +43,9 @@ public class Allocation extends javax.swing.JFrame {
        
         try{
             
-            String sql="SELECT SID,SName,CID,CName,Batch FROM allocation ";
-            pst=(PreparedStatement) con.prepareStatement(sql);
+            String sq="SELECT id,NameDentedByInitials ,CID,DID,Batch FROM student ";
+           // String sql="SELECT SID,SName,CID,CName,Batch FROM student ";
+            pst=(PreparedStatement) con.prepareStatement(sq);
             rs=pst.executeQuery();
             
             
@@ -72,7 +76,6 @@ public class Allocation extends javax.swing.JFrame {
         b2 = new javax.swing.JTextField();
         b3 = new javax.swing.JTextField();
         b4 = new javax.swing.JTextField();
-        b5 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -82,6 +85,9 @@ public class Allocation extends javax.swing.JFrame {
         btn2 = new javax.swing.JButton();
         btn3 = new javax.swing.JButton();
         btn1 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        depbox = new javax.swing.JComboBox();
+        yearsembox = new javax.swing.JComboBox();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -96,6 +102,7 @@ public class Allocation extends javax.swing.JFrame {
         jPanel5.setForeground(new java.awt.Color(255, 255, 255));
 
         table.setBackground(new java.awt.Color(51, 51, 51));
+        table.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
         table.setForeground(new java.awt.Color(255, 255, 255));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -132,6 +139,11 @@ public class Allocation extends javax.swing.JFrame {
         b2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         b2.setForeground(new java.awt.Color(255, 255, 255));
         b2.setPreferredSize(new java.awt.Dimension(10, 25));
+        b2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b2MouseClicked(evt);
+            }
+        });
         b2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b2ActionPerformed(evt);
@@ -152,19 +164,14 @@ public class Allocation extends javax.swing.JFrame {
         b4.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         b4.setForeground(new java.awt.Color(255, 255, 255));
         b4.setPreferredSize(new java.awt.Dimension(10, 25));
+        b4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b4MouseClicked(evt);
+            }
+        });
         b4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b4ActionPerformed(evt);
-            }
-        });
-
-        b5.setBackground(new java.awt.Color(51, 51, 51));
-        b5.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        b5.setForeground(new java.awt.Color(255, 255, 255));
-        b5.setPreferredSize(new java.awt.Dimension(10, 25));
-        b5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b5ActionPerformed(evt);
             }
         });
 
@@ -186,7 +193,7 @@ public class Allocation extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Batch");
+        jLabel9.setText("Year & Semester");
 
         btn4.setBackground(new java.awt.Color(0, 0, 0));
         btn4.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
@@ -232,6 +239,28 @@ public class Allocation extends javax.swing.JFrame {
             }
         });
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Department");
+
+        depbox.setBackground(new java.awt.Color(51, 51, 51));
+        depbox.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        depbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Department", "Department of English", "Department of pali", "Department of Sanskrit", "Department of Sinhala", "Department of Language Skills Development", "Department of Buddhist Philosophy", "Department of Archaeology", "Department of Buddhist Culture", " " }));
+        depbox.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                depboxMouseClicked(evt);
+            }
+        });
+        depbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                depboxActionPerformed(evt);
+            }
+        });
+
+        yearsembox.setBackground(new java.awt.Color(51, 51, 51));
+        yearsembox.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        yearsembox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Year 1 Semester 2", "Year 2 Semester 1", "Year 2 Semester 2", "Year 3 Semester 1", "Year 3 Semester 2", "Year 4 Semester 1", "Year 4 Semester 2" }));
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -246,24 +275,24 @@ public class Allocation extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel5Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addGap(108, 108, 108)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(142, 142, 142)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(b2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(b5, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(b1, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+                    .addComponent(b4, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+                    .addComponent(b3, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+                    .addComponent(b2, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+                    .addComponent(depbox, 0, 0, Short.MAX_VALUE)
+                    .addComponent(yearsembox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 967, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55))
         );
@@ -274,29 +303,35 @@ public class Allocation extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(64, 242, Short.MAX_VALUE))
+                        .addGap(64, 262, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(42, 42, 42)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33)
-                                .addComponent(b2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
-                                .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(39, 39, 39)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(42, 42, 42)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(b5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(37, 37, 37)
+                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(42, 42, 42)
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(33, 33, 33)
+                                        .addComponent(b2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(39, 39, 39)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(48, 48, 48)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(depbox, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(67, 67, 67))
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(yearsembox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -328,7 +363,7 @@ public class Allocation extends javax.swing.JFrame {
                         .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 461, Short.MAX_VALUE)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1066, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -350,7 +385,7 @@ public class Allocation extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(87, 87, 87))
         );
@@ -409,12 +444,24 @@ public class Allocation extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_b1ActionPerformed
 
-    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_b5ActionPerformed
-
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
-        // TODO add your handling code here:
+     
+        
+                 
+     try {
+             String cid = b3.getText();
+            Statement stmt =con.createStatement();
+            rs=stmt.executeQuery("SELECT CName  FROM course  WHERE CID = '"+cid+"'");
+            while(rs.next())
+            {
+                String cname = rs.getString("CName");
+                b4.setText(cname);
+            }
+        } catch (SQLException ex) {
+           System.out.println(ex.toString());
+        }
+       
+        
     }//GEN-LAST:event_b4ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
@@ -427,12 +474,13 @@ public class Allocation extends javax.swing.JFrame {
            String sname = b2.getText();
            String cid = b3.getText();
            String cname = b4.getText();
-           String bat = b5.getText();
+           String dep =depbox.getSelectedItem().toString();
+           String bat = yearsembox.getSelectedItem().toString();
           
           
            try{
                
-                String sql = "UPDATE allocation SET SID ='"+sid+"',SName ='"+sname+"',CID ='"+cid+"',CName ='"+cname+"',Batch ='"+bat+"' WHERE SID = '"+sid+"'";
+                String sql = "UPDATE student SET CID ='"+cid+"',DID ='"+dep+"',Batch ='"+bat+"' WHERE id = '"+sid+"'";
               
            
                pst1 = (PreparedStatement) con.prepareStatement(sql);
@@ -465,13 +513,13 @@ public class Allocation extends javax.swing.JFrame {
            String s1 = b2.getText();
            String s2 = b3.getText();
            String s3 = b4.getText();
-           String s4 = b5.getText();
+          String bat = yearsembox.getSelectedItem().toString();
          
           
            
        try{
                
-                String sql = "DELETE from allocation WHERE SID = '"+sid+"'";
+                String sql = "DELETE from student WHERE id = '"+sid+"'";
                
                pst1 = (PreparedStatement) con.prepareStatement(sql);
               
@@ -516,13 +564,106 @@ public class Allocation extends javax.swing.JFrame {
      b2.setText(sname);
      b3.setText(cid);
      b4.setText(cname);
-     b5.setText(bat);
+     yearsembox.setSelectedItem(bat);
         
     }//GEN-LAST:event_tableMouseClicked
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
         // TODO add your handling code here:
+        
+        String SID = b1.getText();
+        String sname = b2.getText();
+        String CID = b3.getText();
+        String cname = b4.getText();
+        String batch = yearsembox.getSelectedItem().toString();
+        String dep = depbox.getSelectedItem().toString();
+
+        try {
+
+            if(b1.getText().isEmpty() || b2.getText().isEmpty()||b3.getText().isEmpty() || b4.getText().isEmpty()|| yearsembox.getSelectedItem().toString().isEmpty())
+            {
+                JOptionPane.showMessageDialog(null, "Please fill all Fields !!!");
+            }
+
+            else{
+
+               // String q1 = "INSERT INTO course (Faculty,DID,CID,CName) values ('"+ SID +"','"+ sname +"','"+ CID +"','"+ cname +"');";
+               // String q2 = "INSERT INTO student (CID,DID,Batch) values ('"+ CID +"','"+ dep +"','"+ batch +"') WHERE SID = '"+SID+"';";
+                String q2 = "UPDATE student SET CID ='"+CID+"',DID ='"+dep+"',Batch ='"+batch+"'  WHERE id = '"+SID+"'";
+
+                pst1 = (PreparedStatement) con.prepareStatement(q2);
+
+                pst1.execute();
+                tableLoad(); //load table
+
+                JOptionPane.showMessageDialog(null, "Data is inserted successfully..!");
+
+            }
+
+        } catch (Exception e) {
+
+            System.out.println(e.toString());
+        }
     }//GEN-LAST:event_btn4ActionPerformed
+
+    private void depboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_depboxActionPerformed
+
+    private void b2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b2MouseClicked
+       
+                 
+     try {
+             String sid = b1.getText();
+            Statement stmt =con.createStatement();
+            rs=stmt.executeQuery("SELECT NameDentedByInitials   FROM student  WHERE id = '"+sid+"'");
+            while(rs.next())
+            {
+                String sname = rs.getString("NameDentedByInitials ");
+                b2.setText(sname);
+            }
+        } catch (SQLException ex) {
+           System.out.println(ex.toString());
+        }
+        
+    }//GEN-LAST:event_b2MouseClicked
+
+    private void b4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b4MouseClicked
+        // TODO add your handling code here:
+         try {
+             String cid = b3.getText();
+            Statement stmt =con.createStatement();
+            rs=stmt.executeQuery("SELECT CName  FROM course  WHERE CID = '"+cid+"'");
+            while(rs.next())
+            {
+                String sname = rs.getString("CName");
+                b4.setText(sname);
+            }
+        } catch (SQLException ex) {
+           System.out.println(ex.toString());
+        }
+        
+        
+    }//GEN-LAST:event_b4MouseClicked
+
+    private void depboxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_depboxMouseClicked
+        // TODO add your handling code here:
+        
+         try {
+             String cid = b3.getText();
+            Statement stmt =con.createStatement();
+            rs=stmt.executeQuery("SELECT Department  FROM course  WHERE CID = '"+cid+"'");
+            while(rs.next())
+            {
+                String dname = rs.getString("Department");
+                depbox.setSelectedItem(dname);
+            }
+        } catch (SQLException ex) {
+           System.out.println(ex.toString());
+        }
+        
+        
+    }//GEN-LAST:event_depboxMouseClicked
 
     /**
      * @param args the command line arguments
@@ -564,12 +705,13 @@ public class Allocation extends javax.swing.JFrame {
     private javax.swing.JTextField b2;
     private javax.swing.JTextField b3;
     private javax.swing.JTextField b4;
-    private javax.swing.JTextField b5;
     private javax.swing.JButton btn1;
     private javax.swing.JButton btn2;
     private javax.swing.JButton btn3;
     private javax.swing.JButton btn4;
+    private javax.swing.JComboBox depbox;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -583,5 +725,6 @@ public class Allocation extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table;
+    private javax.swing.JComboBox yearsembox;
     // End of variables declaration//GEN-END:variables
 }
