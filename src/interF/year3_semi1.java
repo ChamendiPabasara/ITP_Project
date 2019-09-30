@@ -990,7 +990,7 @@ public class year3_semi1 extends javax.swing.JFrame {
          while(rs.next())
             {
                 int cred = rs.getInt("Credit");
-                AC4.setValue(cred);
+                AC6.setValue(cred);
             }
          
      }catch(SQLException ex) {

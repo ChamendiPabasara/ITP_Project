@@ -98,6 +98,7 @@ public class year4_semi2 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel3.setForeground(new java.awt.Color(255, 153, 0));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BPU_LOGO.png"))); // NOI18N
@@ -117,6 +118,7 @@ public class year4_semi2 extends javax.swing.JFrame {
 
         SIDbox.setBackground(new java.awt.Color(51, 51, 51));
         SIDbox.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        SIDbox.setForeground(new java.awt.Color(255, 153, 0));
         SIDbox.setDisabledTextColor(new java.awt.Color(255, 0, 0));
         SIDbox.setPreferredSize(new java.awt.Dimension(10, 25));
         SIDbox.addActionListener(new java.awt.event.ActionListener() {
@@ -282,7 +284,7 @@ public class year4_semi2 extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 122, Short.MAX_VALUE)
+            .addGap(0, 86, Short.MAX_VALUE)
         );
 
         jButton5.setBackground(new java.awt.Color(0, 0, 0));
@@ -373,6 +375,7 @@ public class year4_semi2 extends javax.swing.JFrame {
 
         snamebox.setBackground(new java.awt.Color(51, 51, 51));
         snamebox.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        snamebox.setForeground(new java.awt.Color(255, 153, 0));
         snamebox.setDisabledTextColor(new java.awt.Color(255, 0, 0));
         snamebox.setPreferredSize(new java.awt.Dimension(10, 25));
         snamebox.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -393,41 +396,13 @@ public class year4_semi2 extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(77, 77, 77)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(grade2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(grade1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(grade3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(grade4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(grade5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(grade7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(grade6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(151, 151, 151)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(AC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AC2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AC3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AC4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AC5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AC7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AC6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(98, 98, 98)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel11)
-                                .addGap(99, 99, 99)
+                                .addGap(101, 101, 101)
                                 .addComponent(jLabel7)
-                                .addGap(66, 66, 66)
+                                .addGap(64, 64, 64)
                                 .addComponent(jLabel6))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -440,7 +415,43 @@ public class year4_semi2 extends javax.swing.JFrame {
                                     .addComponent(SIDbox, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(snamebox, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(GPAbox, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(statusbox, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(statusbox, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(77, 77, 77)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(grade4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(grade2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(grade1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(grade3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(151, 151, 151)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(AC1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(AC2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(AC3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(AC4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(grade5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(151, 151, 151)
+                                .addComponent(AC5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(grade6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(AC6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(grade7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(AC7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(216, 216, 216)
@@ -486,28 +497,9 @@ public class year4_semi2 extends javax.swing.JFrame {
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(19, 19, 19)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel17)
-                                    .addComponent(grade5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(AC5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel15)
-                                    .addComponent(grade6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(AC6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(34, 34, 34)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel18)
-                            .addComponent(grade7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AC7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(108, 108, 108))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(114, 114, 114))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -519,27 +511,27 @@ public class year4_semi2 extends javax.swing.JFrame {
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(statusbox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel10))
-                                .addGap(47, 47, 47)
+                                .addGap(36, 36, 36)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel11)
                                     .addComponent(jLabel7)
                                     .addComponent(jLabel6))
-                                .addGap(39, 39, 39)
+                                .addGap(38, 38, 38)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel13)
                                     .addComponent(grade1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(AC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(32, 32, 32)
+                                .addGap(34, 34, 34)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel14)
                                     .addComponent(grade2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(AC2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(38, 38, 38)
+                                .addGap(42, 42, 42)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel12)
                                     .addComponent(grade3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(AC3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(34, 34, 34)
+                                .addGap(39, 39, 39)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel16)
                                     .addComponent(grade4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -547,7 +539,22 @@ public class year4_semi2 extends javax.swing.JFrame {
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(63, 63, 63)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(13, 13, 13)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel17)
+                            .addComponent(grade5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AC5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(42, 42, 42)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel15)
+                            .addComponent(grade6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AC6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel18)
+                            .addComponent(grade7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AC7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)))
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -593,7 +600,7 @@ public class year4_semi2 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -607,288 +614,11 @@ public class year4_semi2 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void SIDboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SIDboxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SIDboxActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-         int credit1 = (Integer)AC1.getValue();
-        int credit2 = (Integer)AC2.getValue();
-        int credit3 = (Integer)AC3.getValue();
-        int credit4 = (Integer)AC4.getValue();
-        int credit5 =(Integer) AC5.getValue();
-        int credit6 =(Integer)AC6.getValue();
-       int credit7 =(Integer)AC7.getValue();
-      
-        int tot = credit1+credit2+credit3+credit4+credit5+credit6+credit7;
-       // ACbox.setText(""+tot);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
-    
-         int credit1 = (Integer)AC1.getValue();
-        int credit2 = (Integer)AC2.getValue();
-        int credit3 = (Integer)AC3.getValue();
-        int credit4 = (Integer)AC4.getValue();
-        int credit5 =(Integer) AC5.getValue();
-        int credit6 =(Integer)AC6.getValue();
-       int credit7 =(Integer)AC7.getValue();
-        
-        year4_semi2 hell= new year4_semi2();
-		 String Grade1=(String) grade1.getSelectedItem();
-		 String Grade2=(String) grade2.getSelectedItem();
-		 String Grade3=(String) grade3.getSelectedItem();
-		 String Grade4=(String) grade4.getSelectedItem();
-                 String Grade5=(String) grade5.getSelectedItem();
-		 String Grade6=(String) grade6.getSelectedItem();
-		 String Grade7=(String) grade7.getSelectedItem();
-		// String totalac=ACbox.getText();
-         float newa= hell.gpa(Grade1,Grade2,Grade3,Grade4,Grade5,Grade6,Grade7,credit1,credit2,credit3,credit4, credit5, credit6,credit7);
-         System.out.println(newa);
-        
-         String gp = new Float(newa).toString();
-         String status = null;
-         
-         
-    if (Grade1 == "C-" || Grade1 == "D+" || Grade1 == "D" || Grade1 == "E" )          
-    {
-      status = "Fail";
-      System.out.println(status);
-    }   
-             
-    else if (Grade2 == "C-" || Grade2 == "D+" || Grade2 == "D" || Grade2 == "E" )
-    {
-      status = "Fail";
-      System.out.println(status);
-    }       
-    else if (Grade3 == "C-" || Grade3 == "D+" || Grade3 == "D" || Grade3 == "E" ) 
-    {
-      status = "Fail";
-      System.out.println(status);
-    }           
-    else if (Grade4 == "C-" || Grade4 == "D+" || Grade4 == "D" || Grade4 == "E" )
-    {
-      status = "Fail";
-      System.out.println(status);
-    }
-    else if (Grade5 == "C-" || Grade5 == "D+" || Grade5 == "D" || Grade5 == "E" )
-    {
-      status = "Fail";
-      System.out.println(status);
-    }       
-    else if (Grade6 == "C-" || Grade6 == "D+" || Grade6 == "D" || Grade6 == "E" ) 
-    {
-      status = "Fail";
-      System.out.println(status);
-    }           
-    else if (Grade7 == "C-" || Grade7 == "D+" || Grade7 == "D" || Grade7 == "E" )
-    {
-      status = "Fail";
-      System.out.println(status);
-    }
-                             
-    else
-        {
-           status = "Pass"; 
-           System.out.println(status);                
-        }
-         
-         
-          GPAbox.setText("" +gp);
-          statusbox.setText("" +status);
-          
-         
-         
-
-           
-    }                                        
-
-    public float gpa(String gradeLetter1,String gradeLetter2,String gradeLetter3,String gradeLetter4,String gradeLetter5,String gradeLetter6,String gradeLetter7,int credit1,int credit2,int credit3,int credit4,int credit5,int credit6,int credit7)
-{
-    
-    float f=0.0f;float g=0.0f;float h=0.0f;float r=0.0f;float q=0.0f;float s=0.0f;float t=0.0f;float u=0.0f; float  total=0.0f;
-    
-  
-    float crd1=(float)credit1;
-  float crd2=(float)credit2;
-  float crd3=(float)credit3;
-  float crd4=(float)credit4;
-  float crd5=(float)credit5;
-  float crd6=(float)credit6;
-  float crd7=(float)credit7;
-    
-    String [][] grade={{"A+","A","A-","B+","B","B-","C+","C-","D+","D","E"},
-                       {"4.0","3.7","3.3","3.0","2.7","2.3","1.7","1.3","1.0","0.7","0.0"}               
-         };
-       String a,b,c,d,y,z,k;
-
-       
-         for (int j = 0; j < 11; j++) {
-     if (grade[0][j].equals(gradeLetter1)){
-             a=grade[1][j];
-              f = Float.parseFloat(a);
-         
-      }
-    if (grade[0][j].equals(gradeLetter2)){
-             b=grade[1][j]; 
-             g = Float.parseFloat(b);
-    }
-    if (grade[0][j].equals(gradeLetter3)){
-             c=grade[1][j]; 
-             h = Float.parseFloat(c);
-    }
-    if (grade[0][j].equals(gradeLetter4)){
-             d=grade[1][j]; 
-             r = Float.parseFloat(d);
-    }
-    
-    if (grade[0][j].equals(gradeLetter5)){
-             y=grade[1][j]; 
-             q = Float.parseFloat(y);
-    }
-    if (grade[0][j].equals(gradeLetter6)){
-             z=grade[1][j]; 
-             s = Float.parseFloat(z);
-    }
-    if (grade[0][j].equals(gradeLetter7)){
-             k=grade[1][j]; 
-             u = Float.parseFloat(k);
-    }
-    
-     }
-         
-     float n,m,i,x,e,l,j;
-     n=(f*crd1);
-     m=(g*crd2);
-     i=(h*crd3);
-     x=(r*crd4);
-     e=(q*crd5);
-     l=(s*crd6);
-     j=(u*crd7);
-    
-   
-     float totalup=n+m+i+x+e+l+j;
-     float totacnew=(crd1+crd2+crd3+crd4+crd5+credit6+crd7);
-     total=(totalup/totacnew);
-     return total ;
-
-
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void depboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depboxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_depboxActionPerformed
-
-    private void statusboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusboxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_statusboxActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       
-        selectNO_sub select = new selectNO_sub();
-        select.setVisible(true);
-        this.dispose();
-        
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-      
-         SIDbox.setText("") ;
-     //  ACbox.setText("");
-       GPAbox.setText("");
-       statusbox.setText("");
-       AC1.setValue(0);
-       AC2.setValue(0);
-       AC3.setValue(0);
-       AC4.setValue(0);
-       AC5.setValue(0);
-       AC6.setValue(0);
-       AC7.setValue(0);
-       depbox.setSelectedItem("department");
-        
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        
-        String ys = yearsembox.getSelectedItem().toString();
-        String dep = depbox.getSelectedItem().toString();
-        
-        float gpa;
-        gpa = Float.parseFloat(GPAbox.getText());
-        
-        String status = statusbox.getText();
-        
-        String sid = SIDbox.getText();
-        String s1 = grade1.getSelectedItem().toString();
-        String s2 = grade2.getSelectedItem().toString();
-        String s3 = grade3.getSelectedItem().toString();
-        String s4 = grade4.getSelectedItem().toString();
-        String s5 = grade5.getSelectedItem().toString();
-        String s6 = grade6.getSelectedItem().toString();
-        String s7 = grade7.getSelectedItem().toString();
-        
-        
-        try {
-            
-            if(SIDbox.getText().isEmpty() || depbox.getSelectedItem().toString().isEmpty())
-        {
-            JOptionPane.showMessageDialog(null, "Please fill all Fields !!!");
-        }
-            
-            else{ 
-            
-        String q1 = "INSERT INTO year4semi2 (SID,ENGL42213,ENGL42223,ENGL42233,ENGL42243,ENGL43256,PCEN12333,PCEN11323) values ('"+ sid +"','"+ s1 +"','"+ s2 +"','"+ s3 +"','"+ s4 +"','"+s5+"','"+s6+"','"+s7+"');";
-          String q2 = "INSERT INTO results (SID,DID,year_sem,gpa,sem_status  ) values ('"+ sid +"','"+ dep +"','"+ ys +"','"+ gpa +"','"+ status +"');";
-        pst1 = (PreparedStatement) con.prepareStatement(q1);
-       
-        pst2 = (PreparedStatement) con.prepareStatement(q2);
-        pst1.execute();
-        pst2.execute();
-         
-        JOptionPane.showMessageDialog(null, "Data is inserted successfully in both tables..!");
-            
-            } 
-            
-        } catch (Exception e) {  
-            
-            
-           System.out.println(e.toString());
-        }
-        
-        try{
-            
-        }
-        catch (Exception e) {  
-            
-            
-           System.out.println(e.toString());
-        }
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-
-        search s1 = new search();
-        s1.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void GPAboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GPAboxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_GPAboxActionPerformed
-
-    private void snameboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_snameboxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_snameboxActionPerformed
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
         // TODO add your handling code here:
@@ -897,10 +627,14 @@ public class year4_semi2 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel19MouseClicked
 
+    private void snameboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_snameboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_snameboxActionPerformed
+
     private void snameboxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_snameboxMouseClicked
         // TODO add your handling code here:
         try {
-             String sid = SIDbox.getText();
+            String sid = SIDbox.getText();
             Statement stmt =con.createStatement();
             rs=stmt.executeQuery("SELECT NameDentedByInitials  FROM student  WHERE Id = '"+sid+"'");
             while(rs.next())
@@ -909,121 +643,379 @@ public class year4_semi2 extends javax.swing.JFrame {
                 snamebox.setText(sname);
             }
         } catch (SQLException ex) {
-           System.out.println(ex.toString());
+            System.out.println(ex.toString());
         }
     }//GEN-LAST:event_snameboxMouseClicked
 
-    private void grade6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grade6MouseClicked
-     try{
-         Statement stmt =con.createStatement();
-         rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'PCEN12333' ");
-         
-         while(rs.next())
-            {
-                int cred = rs.getInt("Credit");
-                AC6.setValue(cred);
-            }
-         
-     }catch(SQLException ex) {
-           System.out.println(ex.toString());
-        }
-    }//GEN-LAST:event_grade6MouseClicked
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+
+        search s1 = new search();
+        s1.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     private void grade7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grade7MouseClicked
-       try{
-         Statement stmt =con.createStatement();
-         rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'PCEN11323' ");
-         
-         while(rs.next())
+        try{
+            Statement stmt =con.createStatement();
+            rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'PCEN11323' ");
+
+            while(rs.next())
             {
                 int cred = rs.getInt("Credit");
                 AC7.setValue(cred);
             }
-         
-     }catch(SQLException ex) {
-           System.out.println(ex.toString());
+
+        }catch(SQLException ex) {
+            System.out.println(ex.toString());
         }
     }//GEN-LAST:event_grade7MouseClicked
 
-    private void grade1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grade1MouseClicked
-        try{
-         Statement stmt =con.createStatement();
-         rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'ENGL42213' ");
-         
-         while(rs.next())
-            {
-                int cred = rs.getInt("Credit");
-                AC1.setValue(cred);
-            }
-         
-     }catch(SQLException ex) {
-           System.out.println(ex.toString());
-        }
-    }//GEN-LAST:event_grade1MouseClicked
-
-    private void grade2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grade2MouseClicked
-        try{
-         Statement stmt =con.createStatement();
-         rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'ENGL42223' ");
-         
-         while(rs.next())
-            {
-                int cred = rs.getInt("Credit");
-                AC2.setValue(cred);
-            }
-         
-     }catch(SQLException ex) {
-           System.out.println(ex.toString());
-        }
-    }//GEN-LAST:event_grade2MouseClicked
-
-    private void grade3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grade3MouseClicked
-      try{
-         Statement stmt =con.createStatement();
-         rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'ENGL42233' ");
-         
-         while(rs.next())
-            {
-                int cred = rs.getInt("Credit");
-                AC3.setValue(cred);
-            }
-         
-     }catch(SQLException ex) {
-           System.out.println(ex.toString());
-        }
-    }//GEN-LAST:event_grade3MouseClicked
-
-    private void grade4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grade4MouseClicked
-     try{
-         Statement stmt =con.createStatement();
-         rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'ENGL42243' ");
-         
-         while(rs.next())
-            {
-                int cred = rs.getInt("Credit");
-                AC4.setValue(cred);
-            }
-         
-     }catch(SQLException ex) {
-           System.out.println(ex.toString());
-        }
-    }//GEN-LAST:event_grade4MouseClicked
-
     private void grade5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grade5MouseClicked
-       try{
-         Statement stmt =con.createStatement();
-         rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'ENGL43256' ");
-         
-         while(rs.next())
+        try{
+            Statement stmt =con.createStatement();
+            rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'ENGL43256' ");
+
+            while(rs.next())
             {
                 int cred = rs.getInt("Credit");
                 AC5.setValue(cred);
             }
-         
-     }catch(SQLException ex) {
-           System.out.println(ex.toString());
+
+        }catch(SQLException ex) {
+            System.out.println(ex.toString());
         }
     }//GEN-LAST:event_grade5MouseClicked
+
+    private void grade6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grade6MouseClicked
+        try{
+            Statement stmt =con.createStatement();
+            rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'PCEN12333' ");
+
+            while(rs.next())
+            {
+                int cred = rs.getInt("Credit");
+                AC6.setValue(cred);
+            }
+
+        }catch(SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }//GEN-LAST:event_grade6MouseClicked
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+
+        selectNO_sub select = new selectNO_sub();
+        select.setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void statusboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_statusboxActionPerformed
+
+    private void GPAboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GPAboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GPAboxActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+
+        SIDbox.setText("") ;
+        //  ACbox.setText("");
+        GPAbox.setText("");
+        statusbox.setText("");
+        AC1.setValue(0);
+        AC2.setValue(0);
+        AC3.setValue(0);
+        AC4.setValue(0);
+        AC5.setValue(0);
+        AC6.setValue(0);
+        AC7.setValue(0);
+        depbox.setSelectedItem("department");
+
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        String ys = yearsembox.getSelectedItem().toString();
+        String dep = depbox.getSelectedItem().toString();
+
+        float gpa;
+        gpa = Float.parseFloat(GPAbox.getText());
+
+        String status = statusbox.getText();
+
+        String sid = SIDbox.getText();
+        String s1 = grade1.getSelectedItem().toString();
+        String s2 = grade2.getSelectedItem().toString();
+        String s3 = grade3.getSelectedItem().toString();
+        String s4 = grade4.getSelectedItem().toString();
+        String s5 = grade5.getSelectedItem().toString();
+        String s6 = grade6.getSelectedItem().toString();
+        String s7 = grade7.getSelectedItem().toString();
+
+        try {
+
+            if(SIDbox.getText().isEmpty() || depbox.getSelectedItem().toString().isEmpty())
+            {
+                JOptionPane.showMessageDialog(null, "Please fill all Fields !!!");
+            }
+
+            else{
+
+                String q1 = "INSERT INTO year4semi2 (SID,ENGL42213,ENGL42223,ENGL42233,ENGL42243,ENGL43256,PCEN12333,PCEN11323) values ('"+ sid +"','"+ s1 +"','"+ s2 +"','"+ s3 +"','"+ s4 +"','"+s5+"','"+s6+"','"+s7+"');";
+                String q2 = "INSERT INTO results (SID,DID,year_sem,gpa,sem_status  ) values ('"+ sid +"','"+ dep +"','"+ ys +"','"+ gpa +"','"+ status +"');";
+                pst1 = (PreparedStatement) con.prepareStatement(q1);
+
+                pst2 = (PreparedStatement) con.prepareStatement(q2);
+                pst1.execute();
+                pst2.execute();
+
+                JOptionPane.showMessageDialog(null, "Data is inserted successfully in both tables..!");
+
+            }
+
+        } catch (Exception e) {
+
+            System.out.println(e.toString());
+        }
+
+        try{
+
+        }
+        catch (Exception e) {
+
+            System.out.println(e.toString());
+        }
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void grade4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grade4MouseClicked
+        try{
+            Statement stmt =con.createStatement();
+            rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'ENGL42243' ");
+
+            while(rs.next())
+            {
+                int cred = rs.getInt("Credit");
+                AC4.setValue(cred);
+            }
+
+        }catch(SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }//GEN-LAST:event_grade4MouseClicked
+
+    private void grade1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grade1MouseClicked
+        try{
+            Statement stmt =con.createStatement();
+            rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'ENGL42213' ");
+
+            while(rs.next())
+            {
+                int cred = rs.getInt("Credit");
+                AC1.setValue(cred);
+            }
+
+        }catch(SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }//GEN-LAST:event_grade1MouseClicked
+
+    private void grade3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grade3MouseClicked
+        try{
+            Statement stmt =con.createStatement();
+            rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'ENGL42233' ");
+
+            while(rs.next())
+            {
+                int cred = rs.getInt("Credit");
+                AC3.setValue(cred);
+            }
+
+        }catch(SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }//GEN-LAST:event_grade3MouseClicked
+
+    private void grade2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grade2MouseClicked
+        try{
+            Statement stmt =con.createStatement();
+            rs=stmt.executeQuery("SELECT Credit FROM subject WHERE Scode = 'ENGL42223' ");
+
+            while(rs.next())
+            {
+                int cred = rs.getInt("Credit");
+                AC2.setValue(cred);
+            }
+
+        }catch(SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }//GEN-LAST:event_grade2MouseClicked
+
+    private void depboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_depboxActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        int credit1 = (Integer)AC1.getValue();
+        int credit2 = (Integer)AC2.getValue();
+        int credit3 = (Integer)AC3.getValue();
+        int credit4 = (Integer)AC4.getValue();
+        int credit5 =(Integer) AC5.getValue();
+        int credit6 =(Integer)AC6.getValue();
+        int credit7 =(Integer)AC7.getValue();
+
+        year4_semi2 hell= new year4_semi2();
+        String Grade1=(String) grade1.getSelectedItem();
+        String Grade2=(String) grade2.getSelectedItem();
+        String Grade3=(String) grade3.getSelectedItem();
+        String Grade4=(String) grade4.getSelectedItem();
+        String Grade5=(String) grade5.getSelectedItem();
+        String Grade6=(String) grade6.getSelectedItem();
+        String Grade7=(String) grade7.getSelectedItem();
+        // String totalac=ACbox.getText();
+        float newa= hell.gpa(Grade1,Grade2,Grade3,Grade4,Grade5,Grade6,Grade7,credit1,credit2,credit3,credit4, credit5, credit6,credit7);
+        System.out.println(newa);
+
+        String gp = new Float(newa).toString();
+        String status = null;
+
+        if (Grade1 == "C-" || Grade1 == "D+" || Grade1 == "D" || Grade1 == "E" )
+        {
+            status = "Fail";
+            System.out.println(status);
+        }
+
+        else if (Grade2 == "C-" || Grade2 == "D+" || Grade2 == "D" || Grade2 == "E" )
+        {
+            status = "Fail";
+            System.out.println(status);
+        }
+        else if (Grade3 == "C-" || Grade3 == "D+" || Grade3 == "D" || Grade3 == "E" )
+        {
+            status = "Fail";
+            System.out.println(status);
+        }
+        else if (Grade4 == "C-" || Grade4 == "D+" || Grade4 == "D" || Grade4 == "E" )
+        {
+            status = "Fail";
+            System.out.println(status);
+        }
+        else if (Grade5 == "C-" || Grade5 == "D+" || Grade5 == "D" || Grade5 == "E" )
+        {
+            status = "Fail";
+            System.out.println(status);
+        }
+        else if (Grade6 == "C-" || Grade6 == "D+" || Grade6 == "D" || Grade6 == "E" )
+        {
+            status = "Fail";
+            System.out.println(status);
+        }
+        else if (Grade7 == "C-" || Grade7 == "D+" || Grade7 == "D" || Grade7 == "E" )
+        {
+            status = "Fail";
+            System.out.println(status);
+        }
+
+        else
+        {
+            status = "Pass";
+            System.out.println(status);
+        }
+
+        GPAbox.setText("" +gp);
+        statusbox.setText("" +status);
+
+        }
+
+        public float gpa(String gradeLetter1,String gradeLetter2,String gradeLetter3,String gradeLetter4,String gradeLetter5,String gradeLetter6,String gradeLetter7,int credit1,int credit2,int credit3,int credit4,int credit5,int credit6,int credit7)
+        {
+
+            float f=0.0f;float g=0.0f;float h=0.0f;float r=0.0f;float q=0.0f;float s=0.0f;float t=0.0f;float u=0.0f; float  total=0.0f;
+
+            float crd1=(float)credit1;
+            float crd2=(float)credit2;
+            float crd3=(float)credit3;
+            float crd4=(float)credit4;
+            float crd5=(float)credit5;
+            float crd6=(float)credit6;
+            float crd7=(float)credit7;
+
+            String [][] grade={{"A+","A","A-","B+","B","B-","C+","C-","D+","D","E"},
+                {"4.0","3.7","3.3","3.0","2.7","2.3","1.7","1.3","1.0","0.7","0.0"}
+            };
+            String a,b,c,d,y,z,k;
+
+            for (int j = 0; j < 11; j++) {
+                if (grade[0][j].equals(gradeLetter1)){
+                    a=grade[1][j];
+                    f = Float.parseFloat(a);
+
+                }
+                if (grade[0][j].equals(gradeLetter2)){
+                    b=grade[1][j];
+                    g = Float.parseFloat(b);
+                }
+                if (grade[0][j].equals(gradeLetter3)){
+                    c=grade[1][j];
+                    h = Float.parseFloat(c);
+                }
+                if (grade[0][j].equals(gradeLetter4)){
+                    d=grade[1][j];
+                    r = Float.parseFloat(d);
+                }
+
+                if (grade[0][j].equals(gradeLetter5)){
+                    y=grade[1][j];
+                    q = Float.parseFloat(y);
+                }
+                if (grade[0][j].equals(gradeLetter6)){
+                    z=grade[1][j];
+                    s = Float.parseFloat(z);
+                }
+                if (grade[0][j].equals(gradeLetter7)){
+                    k=grade[1][j];
+                    u = Float.parseFloat(k);
+                }
+
+            }
+
+            float n,m,i,x,e,l,j;
+            n=(f*crd1);
+            m=(g*crd2);
+            i=(h*crd3);
+            x=(r*crd4);
+            e=(q*crd5);
+            l=(s*crd6);
+            j=(u*crd7);
+
+            float totalup=n+m+i+x+e+l+j;
+            float totacnew=(crd1+crd2+crd3+crd4+crd5+credit6+crd7);
+            total=(totalup/totacnew);
+            return total ;
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        int credit1 = (Integer)AC1.getValue();
+        int credit2 = (Integer)AC2.getValue();
+        int credit3 = (Integer)AC3.getValue();
+        int credit4 = (Integer)AC4.getValue();
+        int credit5 =(Integer) AC5.getValue();
+        int credit6 =(Integer)AC6.getValue();
+        int credit7 =(Integer)AC7.getValue();
+
+        int tot = credit1+credit2+credit3+credit4+credit5+credit6+credit7;
+        // ACbox.setText(""+tot);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void SIDboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SIDboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SIDboxActionPerformed
 
     /**
      * @param args the command line arguments
