@@ -59,6 +59,8 @@ public class search extends javax.swing.JFrame {
          try {
            String sql = "SELECT r.SID,st.NameDentedByInitials,r.DID,r.year_sem,r.gpa,r.sem_status FROM results r,student st WHERE r.SID = st.id";
                //String sql = "SELECT r.SID,st.FName ,r.DID,r.year_sem,r.gpa,r.sem_status FROM results r,student st WHERE r.SID = st.SID ";
+           
+           
              
              pst = (PreparedStatement) con.prepareStatement(sql);
              rs=pst.executeQuery();
@@ -237,8 +239,8 @@ public class search extends javax.swing.JFrame {
                             .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1097, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(172, 172, 172))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
