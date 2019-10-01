@@ -35,7 +35,7 @@ public class updateAllGrades extends javax.swing.JFrame {
           table1.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,20));
           table1.setOpaque(false);
           table1.getTableHeader().setForeground(Color.BLACK);
-          update1.setBackground(Color.BLACK);
+        
           
            //table 2
         table2.setRowHeight(40);
@@ -576,7 +576,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        update1.setBackground(new java.awt.Color(0, 0, 0));
+        update1.setBackground(new java.awt.Color(255, 255, 255));
         update1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         update1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-downloading-updates-52.png"))); // NOI18N
         update1.setText("Update");
@@ -589,7 +589,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        search1.setBackground(new java.awt.Color(0, 0, 0));
+        search1.setBackground(new java.awt.Color(255, 255, 255));
         search1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         search1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-search-52.png"))); // NOI18N
         search1.setText("Search");
@@ -602,7 +602,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        clear1.setBackground(new java.awt.Color(0, 0, 0));
+        clear1.setBackground(new java.awt.Color(255, 255, 255));
         clear1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         clear1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-erase-50.png"))); // NOI18N
         clear1.setText("Clear");
@@ -639,7 +639,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        delete1.setBackground(new java.awt.Color(0, 0, 0));
+        delete1.setBackground(new java.awt.Color(255, 255, 255));
         delete1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         delete1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-trash-52.png"))); // NOI18N
         delete1.setText("Delete");
@@ -681,12 +681,12 @@ public class updateAllGrades extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(st1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(143, 143, 143)))
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(clear1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(update1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(search1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(delete1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(search1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(update1, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
+                    .addComponent(delete1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(clear1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel5Layout.createSequentialGroup()
                     .addGap(167, 167, 167)
@@ -704,40 +704,47 @@ public class updateAllGrades extends javax.swing.JFrame {
                             .addComponent(SIDbox1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addComponent(jLabel19))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                                .addComponent(s1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel16)
-                                .addGap(9, 9, 9))
-                            .addComponent(s2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addGap(31, 31, 31)
+                                        .addComponent(jLabel19))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                                        .addComponent(s1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                        .addComponent(jLabel16)
+                                        .addGap(9, 9, 9))
+                                    .addComponent(s2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(update1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
+                        .addContainerGap()
                         .addComponent(search1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(update1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(s3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17)
+                    .addComponent(delete1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(s3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel18)
-                            .addComponent(s4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(delete1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(clear1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(st1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(gpa4)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                            .addComponent(s4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(46, 46, 46)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(st1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(gpa4))
+                        .addContainerGap(26, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(clear1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44))))
             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                     .addContainerGap(339, Short.MAX_VALUE)
@@ -907,11 +914,11 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        update2.setBackground(new java.awt.Color(0, 0, 0));
+        update2.setBackground(new java.awt.Color(255, 255, 255));
         update2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         update2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-downloading-updates-52.png"))); // NOI18N
         update2.setText("Update");
-        update2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        update2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         update2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         update2.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         update2.addActionListener(new java.awt.event.ActionListener() {
@@ -920,7 +927,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        search2.setBackground(new java.awt.Color(0, 0, 0));
+        search2.setBackground(new java.awt.Color(255, 255, 255));
         search2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         search2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-search-52.png"))); // NOI18N
         search2.setText("Search");
@@ -933,7 +940,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        delete2.setBackground(new java.awt.Color(0, 0, 0));
+        delete2.setBackground(new java.awt.Color(255, 255, 255));
         delete2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         delete2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-trash-52.png"))); // NOI18N
         delete2.setText("Delete");
@@ -954,7 +961,7 @@ public class updateAllGrades extends javax.swing.JFrame {
         gpa3.setForeground(new java.awt.Color(255, 153, 0));
         gpa3.setText("GPA");
 
-        clear2.setBackground(new java.awt.Color(0, 0, 0));
+        clear2.setBackground(new java.awt.Color(255, 255, 255));
         clear2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         clear2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-erase-50.png"))); // NOI18N
         clear2.setText("Clear");
@@ -998,14 +1005,10 @@ public class updateAllGrades extends javax.swing.JFrame {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(52, 52, 52)))
+                                    .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(s6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(s7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1217,7 +1220,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        search3.setBackground(new java.awt.Color(0, 0, 0));
+        search3.setBackground(new java.awt.Color(255, 255, 255));
         search3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         search3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-search-52.png"))); // NOI18N
         search3.setText("Search");
@@ -1230,7 +1233,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        delete3.setBackground(new java.awt.Color(0, 0, 0));
+        delete3.setBackground(new java.awt.Color(255, 255, 255));
         delete3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         delete3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-trash-52.png"))); // NOI18N
         delete3.setText("Delete");
@@ -1243,7 +1246,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        update3.setBackground(new java.awt.Color(0, 0, 0));
+        update3.setBackground(new java.awt.Color(255, 255, 255));
         update3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         update3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-downloading-updates-52.png"))); // NOI18N
         update3.setText("Update");
@@ -1256,7 +1259,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        clear3.setBackground(new java.awt.Color(0, 0, 0));
+        clear3.setBackground(new java.awt.Color(255, 255, 255));
         clear3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         clear3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-erase-50.png"))); // NOI18N
         clear3.setText("Clear");
@@ -1568,7 +1571,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        search4.setBackground(new java.awt.Color(0, 0, 0));
+        search4.setBackground(new java.awt.Color(255, 255, 255));
         search4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         search4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-search-52.png"))); // NOI18N
         search4.setText("Search");
@@ -1581,7 +1584,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        update4.setBackground(new java.awt.Color(0, 0, 0));
+        update4.setBackground(new java.awt.Color(255, 255, 255));
         update4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         update4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-downloading-updates-52.png"))); // NOI18N
         update4.setText("Update");
@@ -1594,7 +1597,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        delete4.setBackground(new java.awt.Color(0, 0, 0));
+        delete4.setBackground(new java.awt.Color(255, 255, 255));
         delete4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         delete4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-trash-52.png"))); // NOI18N
         delete4.setText("Delete");
@@ -1607,7 +1610,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        clear4.setBackground(new java.awt.Color(0, 0, 0));
+        clear4.setBackground(new java.awt.Color(255, 255, 255));
         clear4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         clear4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-erase-50.png"))); // NOI18N
         clear4.setText("Clear");
@@ -1912,7 +1915,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        delete5.setBackground(new java.awt.Color(0, 0, 0));
+        delete5.setBackground(new java.awt.Color(255, 255, 255));
         delete5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         delete5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-trash-52.png"))); // NOI18N
         delete5.setText("Delete");
@@ -1925,7 +1928,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        update5.setBackground(new java.awt.Color(0, 0, 0));
+        update5.setBackground(new java.awt.Color(255, 255, 255));
         update5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         update5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-downloading-updates-52.png"))); // NOI18N
         update5.setText("Update");
@@ -1938,7 +1941,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        search5.setBackground(new java.awt.Color(0, 0, 0));
+        search5.setBackground(new java.awt.Color(255, 255, 255));
         search5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         search5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-search-52.png"))); // NOI18N
         search5.setText("Search");
@@ -1951,7 +1954,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        clear5.setBackground(new java.awt.Color(0, 0, 0));
+        clear5.setBackground(new java.awt.Color(255, 255, 255));
         clear5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         clear5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-erase-50.png"))); // NOI18N
         clear5.setText("Clear");
@@ -2256,7 +2259,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        update6.setBackground(new java.awt.Color(0, 0, 0));
+        update6.setBackground(new java.awt.Color(255, 255, 255));
         update6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         update6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-downloading-updates-52.png"))); // NOI18N
         update6.setText("Update");
@@ -2269,7 +2272,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        delete6.setBackground(new java.awt.Color(0, 0, 0));
+        delete6.setBackground(new java.awt.Color(255, 255, 255));
         delete6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         delete6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-trash-52.png"))); // NOI18N
         delete6.setText("Delete");
@@ -2282,7 +2285,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        search6.setBackground(new java.awt.Color(0, 0, 0));
+        search6.setBackground(new java.awt.Color(255, 255, 255));
         search6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         search6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-search-52.png"))); // NOI18N
         search6.setText("Search");
@@ -2295,7 +2298,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        clear6.setBackground(new java.awt.Color(0, 0, 0));
+        clear6.setBackground(new java.awt.Color(255, 255, 255));
         clear6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         clear6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-erase-50.png"))); // NOI18N
         clear6.setText("Clear");
@@ -2627,7 +2630,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        search7.setBackground(new java.awt.Color(0, 0, 0));
+        search7.setBackground(new java.awt.Color(255, 255, 255));
         search7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         search7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-search-52.png"))); // NOI18N
         search7.setText("Search");
@@ -2640,7 +2643,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        delete7.setBackground(new java.awt.Color(0, 0, 0));
+        delete7.setBackground(new java.awt.Color(255, 255, 255));
         delete7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         delete7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-trash-52.png"))); // NOI18N
         delete7.setText("Delete");
@@ -2653,7 +2656,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        update7.setBackground(new java.awt.Color(0, 0, 0));
+        update7.setBackground(new java.awt.Color(255, 255, 255));
         update7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         update7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-downloading-updates-52.png"))); // NOI18N
         update7.setText("Update");
@@ -2666,7 +2669,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        clear7.setBackground(new java.awt.Color(0, 0, 0));
+        clear7.setBackground(new java.awt.Color(255, 255, 255));
         clear7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         clear7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-erase-50.png"))); // NOI18N
         clear7.setText("Clear");
@@ -2815,7 +2818,6 @@ public class updateAllGrades extends javax.swing.JFrame {
                             .addComponent(jLabel47)
                             .addComponent(ss36, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(13, 13, 13)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addComponent(jLabel71)
@@ -2838,7 +2840,6 @@ public class updateAllGrades extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addComponent(clear7, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(st7, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel69)
@@ -2958,7 +2959,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        search8.setBackground(new java.awt.Color(0, 0, 0));
+        search8.setBackground(new java.awt.Color(255, 255, 255));
         search8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         search8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-search-52.png"))); // NOI18N
         search8.setText("Search");
@@ -2971,7 +2972,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        delete8.setBackground(new java.awt.Color(0, 0, 0));
+        delete8.setBackground(new java.awt.Color(255, 255, 255));
         delete8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         delete8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-trash-52.png"))); // NOI18N
         delete8.setText("Delete");
@@ -2984,7 +2985,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        update8.setBackground(new java.awt.Color(0, 0, 0));
+        update8.setBackground(new java.awt.Color(255, 255, 255));
         update8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         update8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-downloading-updates-52.png"))); // NOI18N
         update8.setText("Update");
@@ -2997,7 +2998,7 @@ public class updateAllGrades extends javax.swing.JFrame {
             }
         });
 
-        clear8.setBackground(new java.awt.Color(0, 0, 0));
+        clear8.setBackground(new java.awt.Color(255, 255, 255));
         clear8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         clear8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interF/icons8-erase-50.png"))); // NOI18N
         clear8.setText("Clear");
@@ -3767,50 +3768,6 @@ public class updateAllGrades extends javax.swing.JFrame {
              Logger.getLogger(Searchvalue.class.getName()).log(Level.SEVERE, null, ex);
          }
     }//GEN-LAST:event_search1ActionPerformed
-
-    private void update1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update1ActionPerformed
-      
-        int x = JOptionPane.showConfirmDialog(null, "Do you Really want to UPDATE ?");
-       
-       if(x == 0)
-       {
-          String sid = SIDbox1.getText();
-           String sub1 = s1.getText();
-           String sub2 = s2.getText();
-           String sub3 = s3.getText();
-           String sub4 = s4.getText();
-         
-           String gp = gpa1.getText();
-           String ss =st1.getText();
-           
-          
-           try{
-               
-                String sql = "UPDATE year1sem1 SET ENGL11013 ='"+sub1+"',ENGL11263 ='"+sub2+"',PCEN11323 ='"+sub3+"',PCEN12333 ='"+sub4+"' WHERE SID = '"+sid+"'";
-                String sq = "UPDATE results SET gpa ='"+gp+"',sem_status ='"+ss+"' WHERE SID = '"+sid+"'";
-           
-              
-                
-               pst1 = (PreparedStatement) con.prepareStatement(sql);
-               pst2 = (PreparedStatement) con.prepareStatement(sq);
-               pst1.execute();
-               pst2.execute();
-               tableLoad1(); //load table
-                //JOptionPane.showMessageDialog(null, "Data UPDATED successfully in both tables..!");
-           
-           
-           }
-           catch(Exception e)
-           {
-               System.out.println(e.toString());
-           }
-          
-           
-           
-       }
-        
-        
-    }//GEN-LAST:event_update1ActionPerformed
 
     private void delete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete1ActionPerformed
       
@@ -4788,6 +4745,43 @@ public class updateAllGrades extends javax.swing.JFrame {
        }
         
     }//GEN-LAST:event_delete7ActionPerformed
+
+    private void update1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update1ActionPerformed
+
+        int x = JOptionPane.showConfirmDialog(null, "Do you Really want to UPDATE ?");
+
+        if(x == 0)
+        {
+            String sid = SIDbox1.getText();
+            String sub1 = s1.getText();
+            String sub2 = s2.getText();
+            String sub3 = s3.getText();
+            String sub4 = s4.getText();
+
+            String gp = gpa1.getText();
+            String ss =st1.getText();
+
+            try{
+
+                String sql = "UPDATE year1sem1 SET ENGL11013 ='"+sub1+"',ENGL11263 ='"+sub2+"',PCEN11323 ='"+sub3+"',PCEN12333 ='"+sub4+"' WHERE SID = '"+sid+"'";
+                String sq = "UPDATE results SET gpa ='"+gp+"',sem_status ='"+ss+"' WHERE SID = '"+sid+"'";
+
+                pst1 = (PreparedStatement) con.prepareStatement(sql);
+                pst2 = (PreparedStatement) con.prepareStatement(sq);
+                pst1.execute();
+                pst2.execute();
+                tableLoad1(); //load table
+                //JOptionPane.showMessageDialog(null, "Data UPDATED successfully in both tables..!");
+
+            }
+            catch(Exception e)
+            {
+                System.out.println(e.toString());
+            }
+
+        }
+
+    }//GEN-LAST:event_update1ActionPerformed
 
   
     
