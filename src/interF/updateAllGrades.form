@@ -87,7 +87,11 @@
                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="853" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="738" max="-2" attributes="0"/>
                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -103,7 +107,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -182,7 +190,6 @@
                                               <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jPanel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
@@ -225,6 +232,10 @@
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jPanel18" min="-2" max="-2" attributes="0"/>
                                           </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
@@ -235,23 +246,26 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                      <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane3" min="-2" pref="316" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane3" pref="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jPanel7" max="32767" attributes="0"/>
-                                  <Component id="jScrollPane4" pref="412" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane4" min="-2" pref="401" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                               <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
@@ -259,16 +273,16 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jScrollPane2" min="-2" pref="405" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane2" min="-2" pref="394" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jPanel11" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jPanel9" max="32767" attributes="0"/>
                                   <Component id="jScrollPane5" max="32767" attributes="0"/>
@@ -296,8 +310,9 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                                       <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jScrollPane8" min="-2" pref="405" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
@@ -307,8 +322,9 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                                       <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                       <Component id="jScrollPane9" min="-2" pref="405" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jPanel17" max="32767" attributes="0"/>
@@ -1004,24 +1020,14 @@
                                       </Group>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="clear2" min="-2" pref="153" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="search2" min="-2" pref="153" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="delete2" min="-2" pref="153" max="-2" attributes="0"/>
-                                                  <Component id="update2" min="-2" pref="153" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                          </Group>
+                                      <Component id="search2" alignment="1" min="-2" pref="167" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="clear2" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="delete2" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="update2" alignment="0" pref="167" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -1066,7 +1072,7 @@
                                           <Component id="delete2" min="-2" pref="65" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                           <Component id="clear2" min="-2" pref="65" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
+                                          <EmptySpace pref="41" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
@@ -1560,19 +1566,14 @@
                                   </Group>
                                   <EmptySpace pref="58" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="search3" min="-2" pref="153" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="clear3" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="delete3" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="update3" alignment="0" pref="164" max="32767" attributes="0"/>
                                       </Group>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="delete3" min="-2" pref="153" max="-2" attributes="0"/>
-                                              <Component id="clear3" min="-2" pref="153" max="-2" attributes="0"/>
-                                              <Component id="update3" min="-2" pref="153" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="search3" alignment="1" min="-2" pref="164" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2126,57 +2127,49 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                                          <Component id="SIDbox4" min="-2" pref="256" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel32" min="-2" pref="155" max="-2" attributes="0"/>
+                                          <Component id="jLabel60" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
+                                          <Component id="ENGL22093" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
+                                          <Component id="jLabel33" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
+                                          <Component id="jLabel34" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="jLabel32" min="-2" pref="155" max="-2" attributes="0"/>
-                                                  <Component id="jLabel60" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
-                                                  <Component id="ENGL22093" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
-                                                  <Component id="jLabel33" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
-                                                  <Component id="jLabel34" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="ENGL22073" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                                          <Component id="ss19" min="-2" pref="256" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="ENGL22073" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Component id="jLabel61" min="-2" pref="68" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                                           <Component id="gp4" min="-2" pref="80" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="ss17" alignment="1" min="-2" pref="256" max="-2" attributes="0"/>
-                                              <Component id="ss16" alignment="1" min="-2" pref="256" max="-2" attributes="0"/>
-                                              <Component id="ss18" alignment="1" min="-2" pref="256" max="-2" attributes="0"/>
-                                              <Component id="ss20" alignment="1" min="-2" pref="256" max="-2" attributes="0"/>
                                               <Group type="102" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="ss21" alignment="0" min="-2" pref="256" max="-2" attributes="0"/>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                                          <Component id="st4" min="-2" pref="80" max="-2" attributes="0"/>
-                                                      </Group>
+                                                      <Component id="ss17" alignment="1" min="-2" pref="256" max="-2" attributes="0"/>
+                                                      <Component id="ss16" alignment="1" min="-2" pref="256" max="-2" attributes="0"/>
+                                                      <Component id="ss18" alignment="1" min="-2" pref="256" max="-2" attributes="0"/>
+                                                      <Component id="ss20" alignment="1" min="-2" pref="256" max="-2" attributes="0"/>
+                                                      <Component id="SIDbox4" alignment="1" min="-2" pref="256" max="-2" attributes="0"/>
+                                                      <Component id="ss19" alignment="1" min="-2" pref="256" max="-2" attributes="0"/>
+                                                      <Component id="ss21" alignment="1" min="-2" pref="256" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                                  <Component id="st4" min="-2" pref="80" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
+                                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace pref="70" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="clear4" min="-2" pref="153" max="-2" attributes="0"/>
-                                      <Component id="update4" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
-                                      <Component id="search4" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
-                                      <Component id="delete4" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="clear4" max="32767" attributes="0"/>
+                                      <Component id="delete4" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="update4" alignment="0" pref="163" max="32767" attributes="0"/>
+                                      <Component id="search4" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2208,8 +2201,10 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Component id="delete4" min="-2" pref="65" max="-2" attributes="0"/>
-                                              <Component id="jLabel60" min="-2" max="-2" attributes="0"/>
-                                              <Component id="ss19" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="jLabel60" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="ss19" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
                                       </Group>
                                       <Group type="102" attributes="0">
@@ -2235,7 +2230,7 @@
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="32767" attributes="0"/>
                                           <Component id="clear4" min="-2" pref="65" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -2766,14 +2761,23 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="57" max="32767" attributes="0"/>
+                                  <EmptySpace min="22" pref="15" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="update5" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
-                                      <Component id="search5" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
-                                      <Component id="delete5" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
-                                      <Component id="clear5" min="-2" pref="153" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="update5" min="-2" pref="184" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="delete5" pref="184" max="32767" attributes="0"/>
+                                                  <Component id="clear5" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="search5" min="-2" pref="175" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
@@ -3346,8 +3350,8 @@
                                   <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Component id="ss28" min="-2" pref="256" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="ss31" min="-2" pref="256" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -3357,19 +3361,16 @@
                                               <Component id="ss29" min="-2" pref="256" max="-2" attributes="0"/>
                                               <Component id="ss30" alignment="0" min="-2" pref="256" max="-2" attributes="0"/>
                                               <Component id="ss32" alignment="0" min="-2" pref="256" max="-2" attributes="0"/>
+                                              <Component id="ss28" alignment="0" min="-2" pref="256" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="66" max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="update6" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
-                                              <Component id="search6" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
-                                              <Component id="delete6" min="-2" pref="153" max="-2" attributes="0"/>
-                                              <Component id="clear6" min="-2" pref="153" max="-2" attributes="0"/>
+                                              <Component id="search6" max="32767" attributes="0"/>
+                                              <Component id="update6" alignment="1" pref="168" max="32767" attributes="0"/>
+                                              <Component id="delete6" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="clear6" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="ss31" min="-2" pref="256" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -4033,21 +4034,14 @@
                                   </Group>
                                   <EmptySpace pref="53" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="clear7" min="-2" pref="153" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="delete7" min="-2" pref="153" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="search7" min="-2" pref="153" max="-2" attributes="0"/>
-                                                  <Component id="update7" min="-2" pref="153" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Component id="update7" alignment="1" min="-2" pref="172" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="clear7" max="32767" attributes="0"/>
+                                          <Component id="delete7" pref="172" max="32767" attributes="0"/>
                                       </Group>
+                                      <Component id="search7" alignment="1" min="-2" pref="172" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
@@ -4070,10 +4064,10 @@
                                               <Component id="jLabel45" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="SIDbox7" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="ss35" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ss35" min="-2" pref="34" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -4098,16 +4092,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel71" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="ss39" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                              <Component id="jLabel48" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="ss40" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                                              <Component id="jLabel49" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="ss37" min="-2" pref="34" max="-2" attributes="0"/>
@@ -4120,8 +4105,25 @@
                                               </Group>
                                           </Group>
                                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                          <Component id="clear7" min="-2" pref="65" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="clear7" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                                                      <Component id="jLabel48" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="ss39" min="-2" pref="34" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="ss40" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                              <Component id="jLabel49" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -4599,11 +4601,11 @@
                                               <Component id="ss42" min="-2" pref="256" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="update8" min="-2" pref="153" max="-2" attributes="0"/>
-                                              <Component id="search8" min="-2" pref="153" max="-2" attributes="0"/>
-                                              <Component id="delete8" min="-2" pref="153" max="-2" attributes="0"/>
-                                              <Component id="clear8" min="-2" pref="153" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="search8" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="update8" alignment="0" pref="180" max="32767" attributes="0"/>
+                                              <Component id="delete8" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="clear8" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -4615,7 +4617,7 @@
                                           <Component id="st8" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="70" max="32767" attributes="0"/>
+                                  <EmptySpace pref="43" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -4664,19 +4666,22 @@
                                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jLabel74" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                   <Component id="jLabel75" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jLabel52" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="ss43" min="-2" pref="34" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="ss43" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                                      <Component id="jLabel74" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
                                                   <EmptySpace pref="33" max="32767" attributes="0"/>
                                                   <Component id="ss44" min="-2" pref="34" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="ss45" min="-2" pref="34" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="ss45" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                                                      <Component id="jLabel52" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="ss46" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
@@ -5148,6 +5153,20 @@
                       <Font name="Tahoma" size="36" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Update Grades"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel12">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/interF/icons8-back-arrow-48.png"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel13">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/interF/icons8-home-48.png"/>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
