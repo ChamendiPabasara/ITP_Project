@@ -380,7 +380,7 @@ public class search extends javax.swing.JFrame {
 
   
        
-           updateGrades updG = new updateGrades();
+           updateAllGrades updG = new updateAllGrades();
             updG.setVisible(true);
             this.dispose();
         

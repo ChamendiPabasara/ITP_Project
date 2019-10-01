@@ -804,7 +804,7 @@ public class year3_semi1 extends javax.swing.JFrame {
         String s4 = grade4.getSelectedItem().toString();
         String s5 = grade5.getSelectedItem().toString();
         String s6 = grade6.getSelectedItem().toString();
-      
+       String year =yearsembox.getSelectedItem().toString();
         
         
         try {
@@ -814,7 +814,20 @@ public class year3_semi1 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Please fill all Fields !!!");
         }
             
-            else{ 
+            else{
+                
+                 String validate = "Select COUNT(*) From results WHERE SID = '"+sid+"' AND year_sem  = '"+year+"'";
+                pst1 = (PreparedStatement) con.prepareStatement(validate);
+                 //ResultSet rs= pst.execute(validate);
+                Statement st = con.createStatement();
+                ResultSet rs =st.executeQuery(validate);
+                
+                 if(rs.next() == true)
+                {
+                    JOptionPane.showMessageDialog(null, "Error : Data Already Existed..!"); 
+                }
+                else{
+                
             
         String q1 = "INSERT INTO year3semi1 (SID,ENGL31103,ENGL31113,ENGL31123,ENGL31303,PCEN12333,PCEN11323) values ('"+ sid +"','"+ s1 +"','"+ s2 +"','"+ s3 +"','"+ s4 +"','"+s5+"','"+s6+"');";
          String q2 = "INSERT INTO results (SID,DID,year_sem,gpa,sem_status  ) values ('"+ sid +"','"+ dep +"','"+ ys +"','"+ gpa +"','"+ status +"');";
@@ -827,6 +840,7 @@ public class year3_semi1 extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Data is inserted successfully in both tables..!");
             
             } 
+            }
             
         } catch (Exception e) {  
             

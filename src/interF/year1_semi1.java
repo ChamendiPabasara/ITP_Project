@@ -23,7 +23,9 @@ public class year1_semi1 extends javax.swing.JFrame {
    Connection con = null;
     PreparedStatement pst1 = null;
     PreparedStatement pst2 = null;
+      PreparedStatement pst = null;
     ResultSet rs = null;
+   
     
 
     
@@ -34,6 +36,7 @@ public class year1_semi1 extends javax.swing.JFrame {
         
         //Connect to DB
         con = DBconnect.connect();
+      
         
       jButton1.setVisible(false);
      
@@ -754,7 +757,7 @@ public class year1_semi1 extends javax.swing.JFrame {
         String s2 = grade2.getSelectedItem().toString();
         String s3 = grade3.getSelectedItem().toString();
         String s4 = grade4.getSelectedItem().toString();
-        
+        String year =yearsembox.getSelectedItem().toString();
         
         try {
             
@@ -764,16 +767,34 @@ public class year1_semi1 extends javax.swing.JFrame {
         }
             
             else{ 
-            
-        String q1 = "INSERT INTO year1sem1 (SID,ENGL11013,ENGL11263,PCEN11323,PCEN12333) values ('"+ sid +"','"+ s1 +"','"+ s2 +"','"+ s3 +"','"+ s4 +"');";
-        String q2 = "INSERT INTO results (SID,DID,year_sem,gpa,sem_status  ) values ('"+ sid +"','"+ dep +"','"+ ys +"','"+ gpa +"','"+ status +"');";
-        pst1 = (PreparedStatement) con.prepareStatement(q1);
+                
+               //select count(sid)from results where sid=,yearsem=
+                
+                String validate = "Select COUNT(*) From results WHERE SID = '"+sid+"' AND year_sem  = '"+year+"'";
+                pst = (PreparedStatement) con.prepareStatement(validate);
+                 //ResultSet rs= pst.execute(validate);
+                Statement st = con.createStatement();
+                ResultSet rs =st.executeQuery(validate);
+              
+                
+                if(rs.next() == true)
+                {
+                    JOptionPane.showMessageDialog(null, "Error : Data Already Existed..!"); 
+                }
+                else{
+                    String q1 = "INSERT INTO year1sem1 (SID,ENGL11013,ENGL11263,PCEN11323,PCEN12333) values ('"+ sid +"','"+ s1 +"','"+ s2 +"','"+ s3 +"','"+ s4 +"');";
+                    String q2 = "INSERT INTO results (SID,DID,year_sem,gpa,sem_status  ) values ('"+ sid +"','"+ dep +"','"+ ys +"','"+ gpa +"','"+ status +"');";
+                    pst1 = (PreparedStatement) con.prepareStatement(q1);
        
-        pst2 = (PreparedStatement) con.prepareStatement(q2);
-        pst1.execute();
-        pst2.execute();
+                     pst2 = (PreparedStatement) con.prepareStatement(q2);
+                    pst1.execute();
+                    pst2.execute();
            
-        JOptionPane.showMessageDialog(null, "Data is inserted successfully in both tables..!");
+                    JOptionPane.showMessageDialog(null, "Data is inserted successfully in both tables..!");
+                    
+                }
+            
+        
             
             } 
             
