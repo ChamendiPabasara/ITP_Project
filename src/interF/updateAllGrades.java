@@ -105,10 +105,10 @@ public class updateAllGrades extends javax.swing.JFrame {
          try {
              String sql = "SELECT year1sem1.SID,year1sem1.ENGL11013,year1sem1.ENGL11263,year1sem1.PCEN11323,year1sem1.PCEN12333,results.gpa,results.sem_status FROM year1sem1,results WHERE results.SID=year1sem1.SID";
              
-             pst = (com.mysql.jdbc.PreparedStatement) con.prepareStatement(sql);
+             pst1 = (PreparedStatement) con.prepareStatement(sql);
             //pst2 = (PreparedStatement) con.prepareStatement(sql);
              
-             rs=pst.executeQuery();
+             rs=pst1.executeQuery();
            
               
              
@@ -5053,33 +5053,4 @@ public class updateAllGrades extends javax.swing.JFrame {
 
     
 
-    
-
-//    private void tableLoad2() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//
-//    private void tableLoad3() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//
-//    private void tableLoad4() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//
-//    private void tableLoad5() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//
-//    private void tableLoad6() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//
-//    private void tableLoad7() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//
-//    private void tableLoad8() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
 }
