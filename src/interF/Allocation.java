@@ -125,7 +125,7 @@ public class Allocation extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "SID", "Student Name", "CID", "Course Name", "Batch"
+                "SID", "Student Name", "CID", "DID", "Batch"
             }
         ));
         table.setGridColor(new java.awt.Color(255, 153, 0));
@@ -629,14 +629,14 @@ public class Allocation extends javax.swing.JFrame {
      String sid = table.getValueAt(r,0).toString();
      String sname = table.getValueAt(r,1).toString();
      String cid = table.getValueAt(r,2).toString();
-     String cname = table.getValueAt(r,3).toString();
+     String dname = table.getValueAt(r,3).toString();
      String bat = table.getValueAt(r,4).toString();
      
      
      b1.setText(sid);
      b2.setText(sname);
      b3.setText(cid);
-     b4.setText(cname);
+     depbox.setSelectedItem(dname);
      yearsembox.setSelectedItem(bat);
         
     }//GEN-LAST:event_tableMouseClicked

@@ -279,7 +279,7 @@
                                 <Column editable="true" title="SID" type="java.lang.Object"/>
                                 <Column editable="true" title="Student Name" type="java.lang.Object"/>
                                 <Column editable="true" title="CID" type="java.lang.Object"/>
-                                <Column editable="true" title="Course Name" type="java.lang.Object"/>
+                                <Column editable="true" title="DID" type="java.lang.Object"/>
                                 <Column editable="true" title="Batch" type="java.lang.Object"/>
                               </Table>
                             </Property>
