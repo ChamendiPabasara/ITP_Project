@@ -5,6 +5,8 @@
  */
 package interF;
 import com.mysql.jdbc.PreparedStatement;
+import java.awt.Color;
+import java.awt.Font;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -32,6 +34,10 @@ public class subAdd extends javax.swing.JFrame {
     
     public subAdd() {
         initComponents();
+           table.setRowHeight(40);
+          table.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,20));
+          table.setOpaque(false);
+          table.getTableHeader().setForeground(Color.BLACK);
         
          //Connect to DB
         con = DBconnect.connect();

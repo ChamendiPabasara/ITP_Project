@@ -7,6 +7,7 @@ package interF;
 
 import java.awt.Color;
 import com.mysql.jdbc.PreparedStatement;
+import java.awt.Font;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,7 +39,10 @@ public class search extends javax.swing.JFrame {
     public search() {
         initComponents();
         
-        table1.setRowHeight(40);
+          table1.setRowHeight(40);
+          table1.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,20));
+          table1.setOpaque(false);
+          table1.getTableHeader().setForeground(Color.BLACK);
       
         
           //Connect to DB
@@ -90,12 +94,12 @@ public class search extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         SIDbox = new javax.swing.JTextField();
         depbox = new javax.swing.JComboBox();
-        ys = new javax.swing.JComboBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         table1 = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
         namebox = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        ys = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -158,15 +162,6 @@ public class search extends javax.swing.JFrame {
         depbox.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         depbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Department", "Department of English", "Department of pali", "Department of Sanskrit", "Department of Sinhala", "Department of Language Skills Development", "Department of Buddhist Philosophy", "Department of Archaeology", "Department of Buddhist Culture", " " }));
 
-        ys.setEditable(true);
-        ys.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        ys.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Year 1 Semester 1", "Year 1 Semester 2", "Year 2 Semester 1", "Year 2 Semester 2", "Year 3 Semester 1", "Year 3 Semester 2", "Year 4 Semester 1", "Year 4 Semester 2" }));
-        ys.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ysActionPerformed(evt);
-            }
-        });
-
         table1.setAutoCreateRowSorter(true);
         table1.setBackground(new java.awt.Color(51, 51, 51));
         table1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -221,6 +216,13 @@ public class search extends javax.swing.JFrame {
             }
         });
 
+        ys.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        ys.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ysActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -237,9 +239,9 @@ public class search extends javax.swing.JFrame {
                         .addGap(75, 75, 75)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(depbox, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ys, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(SIDbox)
-                            .addComponent(namebox)))
+                            .addComponent(namebox)
+                            .addComponent(ys, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(299, 299, 299)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -267,9 +269,9 @@ public class search extends javax.swing.JFrame {
                     .addComponent(jLabel7))
                 .addGap(44, 44, 44)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ys, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                    .addComponent(jLabel5)
+                    .addComponent(ys, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -376,19 +378,20 @@ public class search extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        updateGrades updG = new updateGrades();
-        updG.setVisible(true);
-        this.dispose();
+  
+       
+           updateGrades updG = new updateGrades();
+            updG.setVisible(true);
+            this.dispose();
+        
+        
+        
      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void SIDboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SIDboxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SIDboxActionPerformed
-
-    private void ysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ysActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ysActionPerformed
 
     private void table1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table1MouseClicked
 
@@ -404,7 +407,7 @@ public class search extends javax.swing.JFrame {
         SIDbox.setText(sid);
         namebox.setText(sname);
         depbox.setSelectedItem(dep);
-        ys.setSelectedItem(year);
+        ys.setText(year);
 
     }//GEN-LAST:event_table1MouseClicked
 
@@ -414,22 +417,6 @@ public class search extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     
-//         String sidB = SIDbox.getSelectedText();
-//        String nameB = namebox.getSelectedText();
-//        String sql1 = "SELECT r.SID,st.FName,r.DID,r.year_sem,r.gpa,r.sem_status  FROM results r,student st WHERE st.FName LIKE '%"+ nameB +"%' ";
-//        String sql2 = "SELECT r.SID,st.FName,r.DID,r.year_sem,r.gpa,r.sem_status  FROM results r,student st WHERE r.SID LIKE '%"+ sidB +"%' ";
-//         
-//         
-//        try {
-//            pst1 = (PreparedStatement) con.prepareStatement(sql1);
-//            rs1 = pst1.executeQuery();
-//            rs2 = pst2.executeQuery();
-//            table1.setModel(DbUtils.resultSetToTableModel(rs1));
-//            table1.setModel(DbUtils.resultSetToTableModel(rs2));
-//            
-//        } catch (SQLException ex) {
-//            Logger.getLogger(search.class.getName()).log(Level.SEVERE, null, ex);
-//        }
         
         Searchvalue search = new Searchvalue();
         search.setVisible(true);
@@ -444,6 +431,10 @@ public class search extends javax.swing.JFrame {
         year1sem1.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void ysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ysActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ysActionPerformed
 
     /**
      * @param args the command line arguments
@@ -500,7 +491,7 @@ public class search extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField namebox;
     private javax.swing.JTable table1;
-    private javax.swing.JComboBox ys;
+    private javax.swing.JTextField ys;
     // End of variables declaration//GEN-END:variables
 
     

@@ -5,6 +5,8 @@
  */
 package interF;
 import com.mysql.jdbc.PreparedStatement;
+import java.awt.Color;
+import java.awt.Font;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -28,6 +30,11 @@ public class courseADD extends javax.swing.JFrame {
     
     public courseADD() {
         initComponents();
+           table.setRowHeight(40);
+          table.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,20));
+          table.setOpaque(false);
+          table.getTableHeader().setForeground(Color.BLACK);
+        
         
          //Connect to DB
         con = DBconnect.connect();
@@ -133,6 +140,7 @@ public class courseADD extends javax.swing.JFrame {
         jLabel8.setText("Course Name");
 
         table.setBackground(new java.awt.Color(51, 51, 51));
+        table.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         table.setForeground(new java.awt.Color(255, 255, 255));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

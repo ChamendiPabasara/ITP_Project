@@ -5,6 +5,8 @@
  */
 package interF;
 import com.mysql.jdbc.PreparedStatement;
+import java.awt.Color;
+import java.awt.Font;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -31,6 +33,10 @@ public class Allocation extends javax.swing.JFrame {
     
     public Allocation() {
         initComponents();
+           table.setRowHeight(40);
+          table.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,17));
+          table.setOpaque(false);
+          table.getTableHeader().setForeground(Color.BLACK);
         
          //Connect to DB
         con = DBconnect.connect();

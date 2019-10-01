@@ -6,6 +6,8 @@
 package interF;
 
 import com.mysql.jdbc.PreparedStatement;
+import java.awt.Color;
+import java.awt.Font;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -31,6 +33,10 @@ public class Searchvalue extends javax.swing.JFrame {
      */
     public Searchvalue() {
         initComponents();
+           table1.setRowHeight(40);
+          table1.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,20));
+          table1.setOpaque(false);
+          table1.getTableHeader().setForeground(Color.BLACK);
         
         //Connect to DB
         con = DBconnect.connect();
